@@ -5,6 +5,11 @@ import com.wifi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * 处理用户注册和登录的业务逻辑
+ * 通过UserRepository与数据库交互，实现用户注册和登录功能
+ */
+
 @Service
 public class UserService {
 

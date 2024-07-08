@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 处理注册和登录请求
+ * 使用UserService进行用户注册和登录操作，返回统一的ApiResponse响应。
+ */
 @RestController
 @RequestMapping("/api")
 public class UserController {
