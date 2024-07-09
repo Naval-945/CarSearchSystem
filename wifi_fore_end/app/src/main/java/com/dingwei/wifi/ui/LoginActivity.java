@@ -36,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "WifiScanService created");
         setContentView(R.layout.activity_login);
 
         usernameEditText = findViewById(R.id.username);
@@ -54,30 +55,20 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // 检查并请求权限
-        if (!hasPermissions()) {
-            requestPermissions();
-        }
-    }
-
-    private boolean hasPermissions() {
-        return ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED &&
-                ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED &&
-                ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_WIFI_STATE) == PackageManager.PERMISSION_GRANTED &&
-                ContextCompat.checkSelfPermission(this, android.Manifest.permission.CHANGE_WIFI_STATE) == PackageManager.PERMISSION_GRANTED &&
-                ContextCompat.checkSelfPermission(this, android.Manifest.permission.INTERNET) == PackageManager.PERMISSION_GRANTED;
+        requestPermissions();
     }
 
     private void requestPermissions() {
-        ActivityCompat.requestPermissions(this,
-                new String[]{
-                        android.Manifest.permission.ACCESS_FINE_LOCATION,
-                        android.Manifest.permission.ACCESS_COARSE_LOCATION,
-                        android.Manifest.permission.ACCESS_WIFI_STATE,
-                        android.Manifest.permission.CHANGE_WIFI_STATE,
-                        android.Manifest.permission.INTERNET
-                },
-                PERMISSIONS_REQUEST_CODE);
+        String[] permissions = {
+                android.Manifest.permission.ACCESS_FINE_LOCATION,
+                android.Manifest.permission.ACCESS_COARSE_LOCATION,
+                android.Manifest.permission.ACCESS_WIFI_STATE,
+                android.Manifest.permission.CHANGE_WIFI_STATE,
+                android.Manifest.permission.FOREGROUND_SERVICE,
+                android.Manifest.permission.FOREGROUND_SERVICE_LOCATION
+        };
+
+        ActivityCompat.requestPermissions(this, permissions, PERMISSIONS_REQUEST_CODE);
     }
 
     @Override
@@ -102,6 +93,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginUser(String username, String password) {
+        Log.d(TAG, "in loginUser(): " + username + password);
         Retrofit retrofit = RetrofitClient.getClient("http://123.249.15.162:8848/");
         ApiService apiService = retrofit.create(ApiService.class);
 
@@ -124,15 +116,9 @@ public class LoginActivity extends AppCompatActivity {
                         User user = apiResponse.getData();
                         Log.i(TAG, "Login successful: " + user.getUsername());
                         Toast.makeText(LoginActivity.this, "登录成功！欢迎 " + user.getUsername(), Toast.LENGTH_LONG).show();
-                        System.out.println("登录成功，启动 WiFi 扫描服务");
 
-                        // 检查权限并启动 WiFi 扫描服务
-                        if (hasPermissions()) {
-                            Intent serviceIntent = new Intent(LoginActivity.this, WifiScanService.class);
-                            startService(serviceIntent);
-                        } else {
-                            requestPermissions();
-                        }
+                        Intent serviceIntent = new Intent(LoginActivity.this, WifiScanService.class);
+                        startForegroundService(serviceIntent);
 
                     } else {
                         Log.w(TAG, "Login failed: " + apiResponse.getMessage());

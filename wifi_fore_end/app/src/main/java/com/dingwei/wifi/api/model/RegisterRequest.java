@@ -1,6 +1,7 @@
 package com.dingwei.wifi.api.model;
 
 public class RegisterRequest {
+
     private String username;
     private String password;
 
@@ -11,5 +12,4 @@ public class RegisterRequest {
 
     public RegisterRequest(){};
 
-    // Getters and Setters
 }

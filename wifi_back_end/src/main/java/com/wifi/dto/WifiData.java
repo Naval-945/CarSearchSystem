@@ -5,12 +5,16 @@ import lombok.Setter;
 
 import java.util.Map;
 
-@Getter
 @Setter
-public class WifiDataDTO {
+@Getter
+public class WifiData {
+
     private Map<String, Integer> wifiData;
 
-    public WifiDataDTO(Map<String, Integer> wifiData) {
+    public WifiData() {}
+
+    public WifiData(Map<String, Integer> wifiData) {
         this.wifiData = wifiData;
     }
+
 }

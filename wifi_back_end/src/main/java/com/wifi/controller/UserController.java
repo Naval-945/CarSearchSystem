@@ -6,6 +6,8 @@ import com.wifi.request.RegisterRequest;
 import com.wifi.response.ApiResponse;
 import com.wifi.response.ResponseHelper;
 import com.wifi.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +24,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class UserController {
 
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
+
     @Autowired
     private UserService userService;
 
@@ -32,8 +37,10 @@ public class UserController {
 
         try {
             User user = userService.registerUser(username, password);
+            logger.info("User registration successful: {}", user.toString());
             return ResponseHelper.success("Registration successful", user);
         } catch (RuntimeException e) {
+            logger.info("User registration failed: {}", e.getMessage());
             return ResponseHelper.error(HttpStatus.BAD_REQUEST, e.getMessage());
         }
     }
@@ -46,9 +53,11 @@ public class UserController {
         System.out.println("username: " + username + ", password: " + password);
 
         try{
+            logger.info("User login request: username={}, password={}", username, password);
             User user = userService.loginUser(username, password);
             return ResponseHelper.success("Login successful", user);
         }catch(RuntimeException e){
+            logger.info("User login failed: {}", e.getMessage());
             return ResponseHelper.error(HttpStatus.UNAUTHORIZED, e.getMessage());
         }
     }

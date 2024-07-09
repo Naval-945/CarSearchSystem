@@ -1,7 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- 申请必要的权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -32,26 +39,15 @@
             android:exported="true"
             android:theme="@style/Theme.Wifi" />
 
-        <!-- WiFi扫描服务声明 -->
+        <!-- 前台服务声明 -->
         <service
             android:name=".service.WifiScanService"
-            android:exported="true" />
-
-        <!-- 声明WifiScanReceiver -->
-        <receiver android:name=".receiver.WifiScanReceiver" android:exported="false">
-            <intent-filter>
-                <action android:name="android.net.wifi.SCAN_RESULTS"/>
-            </intent-filter>
-        </receiver>
+            android:foregroundServiceType="location"
+            android:exported="true"
+            android:permission="TODO" />
 
     </application>
 
-    <!-- 申请INTERNET权限 -->
-    <uses-permission android:name="android.permission.INTERNET"/>
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
 
 </manifest>

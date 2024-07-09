@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.tcc.wifi</groupId>
-    <artifactId>wifi_back_end</artifactId>
-    <version>1.2.0-SNAPSHOT</version>
+    <artifactId>wifi</artifactId>
+    <version>2.0.1-SNAPSHOT</version>
     <name>wifi</name>
     <description>wifi</description>
     <url/>
