@@ -1,21 +1,25 @@
 package com.dingwei.wifi.ui;
 
-import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.widget.*;
+import android.util.Log;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.dingwei.wifi.R;
 import com.dingwei.wifi.api.ApiService;
 import com.dingwei.wifi.api.RetrofitClient;
-import com.dingwei.wifi.model.ApiResponse;
-import com.dingwei.wifi.model.LoginRequest;
-import com.dingwei.wifi.model.User;
-
-import java.io.IOException;
+import com.dingwei.wifi.api.model.ApiResponse;
+import com.dingwei.wifi.api.model.LoginRequest;
+import com.dingwei.wifi.api.model.User;
+import com.dingwei.wifi.service.WifiScanService;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -24,6 +28,8 @@ import retrofit2.Retrofit;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private static final String TAG = "LoginActivity";
+    private static final int PERMISSIONS_REQUEST_CODE = 1;
     private EditText usernameEditText;
     private EditText passwordEditText;
 
@@ -47,6 +53,52 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
             startActivity(intent);
         });
+
+        // 检查并请求权限
+        if (!hasPermissions()) {
+            requestPermissions();
+        }
+    }
+
+    private boolean hasPermissions() {
+        return ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED &&
+                ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED &&
+                ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_WIFI_STATE) == PackageManager.PERMISSION_GRANTED &&
+                ContextCompat.checkSelfPermission(this, android.Manifest.permission.CHANGE_WIFI_STATE) == PackageManager.PERMISSION_GRANTED &&
+                ContextCompat.checkSelfPermission(this, android.Manifest.permission.INTERNET) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    private void requestPermissions() {
+        ActivityCompat.requestPermissions(this,
+                new String[]{
+                        android.Manifest.permission.ACCESS_FINE_LOCATION,
+                        android.Manifest.permission.ACCESS_COARSE_LOCATION,
+                        android.Manifest.permission.ACCESS_WIFI_STATE,
+                        android.Manifest.permission.CHANGE_WIFI_STATE,
+                        android.Manifest.permission.INTERNET
+                },
+                PERMISSIONS_REQUEST_CODE);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == PERMISSIONS_REQUEST_CODE) {
+            if (grantResults.length > 0 && allPermissionsGranted(grantResults)) {
+                Toast.makeText(this, "权限已授予", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "权限被拒绝", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private boolean allPermissionsGranted(int[] grantResults) {
+        for (int result : grantResults) {
+            if (result != PackageManager.PERMISSION_GRANTED) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private void loginUser(String username, String password) {
@@ -59,42 +111,45 @@ public class LoginActivity extends AppCompatActivity {
         call.enqueue(new Callback<ApiResponse<User>>() {
             @Override
             public void onResponse(@NonNull Call<ApiResponse<User>> call, @NonNull Response<ApiResponse<User>> response) {
-                System.out.println("1" + response.isSuccessful());
-                System.out.println("2" + response.code());
-                System.out.println("3" + response.message());
+                System.out.println("onResponse()");
+                Log.d(TAG, "Response isSuccessful: " + response.isSuccessful());
+                Log.d(TAG, "Response Code: " + response.code());
+                Log.d(TAG, "Response Message: " + response.message());
 
-                //如果相应体返回成功
                 if (response.isSuccessful() && response.body() != null) {
-
                     ApiResponse<User> apiResponse = response.body();
-                    System.out.println("4" + apiResponse);
-                    System.out.println("5" + apiResponse.getStatus());
-                    System.out.println("6" + apiResponse.getMessage());
-                    System.out.println("7" + apiResponse.getData());
+                    Log.d(TAG, "API Response: " + apiResponse);
 
-                    //根据具体状态码处理对应逻辑
                     if (apiResponse.getStatus() == 200) {
                         User user = apiResponse.getData();
-                        // 处理登录成功逻辑
+                        Log.i(TAG, "Login successful: " + user.getUsername());
                         Toast.makeText(LoginActivity.this, "登录成功！欢迎 " + user.getUsername(), Toast.LENGTH_LONG).show();
+                        System.out.println("登录成功，启动 WiFi 扫描服务");
+
+                        // 检查权限并启动 WiFi 扫描服务
+                        if (hasPermissions()) {
+                            Intent serviceIntent = new Intent(LoginActivity.this, WifiScanService.class);
+                            startService(serviceIntent);
+                        } else {
+                            requestPermissions();
+                        }
+
                     } else {
-                        // 处理登录失败逻辑
+                        Log.w(TAG, "Login failed: " + apiResponse.getMessage());
                         Toast.makeText(LoginActivity.this, "登录失败：" + apiResponse.getMessage(), Toast.LENGTH_LONG).show();
                     }
-                }
-                //如果返回响应体为错误
-                else {
-                    //根据错误响应体的状态码进行对应操作
+                } else {
                     try {
                         if (response.code() == 401) {
+                            Log.e(TAG, "Unauthorized: Invalid username or password");
                             Toast.makeText(LoginActivity.this, "登录失败：错误的用户名或密码", Toast.LENGTH_LONG).show();
                         } else {
                             String errorBody = response.errorBody().string();
-                            System.out.println("Error Body: " + errorBody);
+                            Log.e(TAG, "Error Body: " + errorBody);
                             Toast.makeText(LoginActivity.this, "登录失败：" + errorBody, Toast.LENGTH_LONG).show();
                         }
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                    } catch (Exception e) {
+                        Log.e(TAG, "Error parsing error response", e);
                         Toast.makeText(LoginActivity.this, "登录失败：无法解析错误信息", Toast.LENGTH_LONG).show();
                     }
                 }
@@ -102,13 +157,9 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(@NonNull Call<ApiResponse<User>> call, @NonNull Throwable t) {
-                // 处理网络请求失败逻辑
-                System.out.println("Network request failed: " + t.getMessage());
+                Log.e(TAG, "Network request failed: " + t.getMessage());
                 Toast.makeText(LoginActivity.this, "网络请求失败：" + t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }
-
 }
-
-

@@ -9,9 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.dingwei.wifi.R;
 import com.dingwei.wifi.api.ApiService;
 import com.dingwei.wifi.api.RetrofitClient;
-import com.dingwei.wifi.model.ApiResponse;
-import com.dingwei.wifi.model.RegisterRequest;
-import com.dingwei.wifi.model.User;
+import com.dingwei.wifi.api.model.ApiResponse;
+import com.dingwei.wifi.api.model.RegisterRequest;
+import com.dingwei.wifi.api.model.User;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package com.dingwei.wifi.model;
+package com.dingwei.wifi.api.model;
 
 public class ApiResponse<T> {
     private int status;

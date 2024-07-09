@@ -4,6 +4,11 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * 定义用户实体
+ * 使用JPA注解@Entity，并配置自增主键策略和唯一约束。
+ */
+
 @Entity
 @Getter
 @Setter

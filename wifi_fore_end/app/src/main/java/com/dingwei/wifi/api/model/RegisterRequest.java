@@ -1,4 +1,4 @@
-package com.dingwei.wifi.model;
+package com.dingwei.wifi.api.model;
 
 public class RegisterRequest {
     private String username;
