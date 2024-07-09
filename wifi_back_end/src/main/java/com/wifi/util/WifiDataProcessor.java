@@ -1,5 +1,6 @@
 package com.wifi.util;
 
+import com.wifi.dto.LocationInfo;
 import com.wifi.dto.WifiData;
 
 import java.util.HashMap;
@@ -9,15 +10,14 @@ import java.util.Set;
 public class WifiDataProcessor {
 
     private final Set<String> allowedBssids;
-    private final AlgorithmA algorithmA;
+    private final FingerPrint fingerPrint;
 
-    public WifiDataProcessor(Set<String> allowedBssids, AlgorithmA algorithmA) {
+    public WifiDataProcessor(Set<String> allowedBssids, FingerPrint fingerPrint) {
         this.allowedBssids = allowedBssids;
-        this.algorithmA = algorithmA;
+        this.fingerPrint = fingerPrint;
     }
 
-    //TODO: 修改以适配需求
-    public int processWifiData(WifiData wifiData) {
+    public LocationInfo processWifiData(WifiData wifiData) {
         Map<String, Integer> filteredData = new HashMap<>();
         for (Map.Entry<String, Integer> entry : wifiData.getWifiData().entrySet()) {
             if (allowedBssids.contains(entry.getKey())) {
@@ -25,8 +25,7 @@ public class WifiDataProcessor {
             }
         }
 
-        // 调用算法A处理过滤后的数据
-        return algorithmA.process(filteredData);
+        return fingerPrint.getLocation(filteredData);
     }
 }
 
