@@ -1,32 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="36dp">
+    tools:context=".ui.MainActivity">
 
-    <EditText
-        android:id="@+id/username"
+    <ImageView
+        android:id="@+id/imageView_logo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:scaleType="centerInside"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/Linlay_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/username" />
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:alpha="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="257dp">
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/password"
-        android:inputType="textPassword" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="室内停车场寻车系统"
+            android:textSize="36sp" />
 
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/login" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="欢迎回来"
+            android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/registerButton"
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableStart="@drawable/baseline_person_24"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawablePadding="16dp"
+            android:hint="请输入用户名"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:drawableEnd="@drawable/baseline_visibility_24"
+            android:drawableRight="@drawable/baseline_visibility_24"
+            android:drawablePadding="16dp"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textSize="14sp" />
+
+        <android.widget.Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_bg"
+            android:text="登录"
+            android:textColor="@color/white" />
+
+        <android.widget.Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_bg"
+            android:text="注册"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/register" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="© 2024 Group5"
+            android:textSize="14sp"
+            android:textColor="@color/Grey"/>
+
+    </LinearLayout>
+
 </LinearLayout>

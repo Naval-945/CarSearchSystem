@@ -120,6 +120,11 @@ public class LoginActivity extends AppCompatActivity {
                         Intent serviceIntent = new Intent(LoginActivity.this, WifiScanService.class);
                         startForegroundService(serviceIntent);
 
+                        // 启动主界面Activity
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish(); // 结束当前Activity,防止用户返回到登录页面
+
                     } else {
                         Log.w(TAG, "Login failed: " + apiResponse.getMessage());
                         Toast.makeText(LoginActivity.this, "登录失败：" + apiResponse.getMessage(), Toast.LENGTH_LONG).show();

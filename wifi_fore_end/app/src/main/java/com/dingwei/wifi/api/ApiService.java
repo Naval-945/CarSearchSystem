@@ -1,6 +1,7 @@
 package com.dingwei.wifi.api;
 
 import com.dingwei.wifi.api.model.ApiResponse;
+import com.dingwei.wifi.api.model.LocationInfo;
 import com.dingwei.wifi.api.model.LoginRequest;
 import com.dingwei.wifi.api.model.RegisterRequest;
 import com.dingwei.wifi.api.model.User;
@@ -19,7 +20,7 @@ public interface ApiService {
     Call<ApiResponse<User>> registerUser(@Body RegisterRequest registerRequest);
 
     @POST("/api/wifi")
-    Call<ApiResponse<Integer>> sendWifiData(@Body WifiData wifiData);
+    Call<ApiResponse<LocationInfo>> sendWifiData(@Body WifiData wifiData);
 
 }
 

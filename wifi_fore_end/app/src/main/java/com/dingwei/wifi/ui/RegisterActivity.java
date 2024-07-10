@@ -1,5 +1,6 @@
 package com.dingwei.wifi.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.*;
 
@@ -59,6 +60,12 @@ public class RegisterActivity extends AppCompatActivity {
                         User user = apiResponse.getData();
                         // 处理注册成功逻辑
                         Toast.makeText(RegisterActivity.this, "注册成功！欢迎 " + user.getUsername(), Toast.LENGTH_LONG).show();
+
+                        // 启动主界面Activity
+                        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish(); // 结束当前Activity,防止用户返回到登录页面
+
                     } else {
                         // 处理注册失败逻辑
                         Toast.makeText(RegisterActivity.this, "注册失败：" + apiResponse.getMessage(), Toast.LENGTH_LONG).show();

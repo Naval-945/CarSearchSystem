@@ -1,14 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- 申请必要的权限 -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -19,19 +19,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Wifi"
-        android:networkSecurityConfig="@xml/network_security_config"
-        tools:targetApi="31">
-
-        <!-- LoginActivity声明，设置为启动Activity -->
+        tools:targetApi="31"
+        android:networkSecurityConfig="@xml/network_security_config">
         <activity
-            android:name=".ui.LoginActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Wifi">
+            android:name=".ui.MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Wifi" />
+
+        <!-- SplashActivity声明，设置为启动Activity -->
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- LoginActivity声明 -->
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Wifi" />
 
         <!-- RegisterActivity声明 -->
         <activity
@@ -39,15 +49,11 @@
             android:exported="true"
             android:theme="@style/Theme.Wifi" />
 
-        <!-- 前台服务声明 -->
         <service
             android:name=".service.WifiScanService"
-            android:foregroundServiceType="location"
             android:exported="true"
+            android:foregroundServiceType="location"
             android:permission="TODO" />
-
     </application>
-
-
 
 </manifest>

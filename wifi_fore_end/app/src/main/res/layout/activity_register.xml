@@ -1,26 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="32dp">
+
+    <ImageView
+        android:id="@+id/imageView_logo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:scaleType="centerInside"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/registerUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username" />
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edittext_bg"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawableLeft="@drawable/baseline_person_24"
+        android:drawablePadding="16dp"
+        android:hint="请输入用户名"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:textSize="14sp"
+        />
 
     <EditText
         android:id="@+id/registerPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edittext_bg"
+        android:drawableStart="@drawable/baseline_lock_24"
+        android:drawableLeft="@drawable/baseline_lock_24"
+        android:drawableEnd="@drawable/baseline_visibility_24"
+        android:drawableRight="@drawable/baseline_visibility_24"
+        android:drawablePadding="16dp"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textSize="14sp" />
 
-    <Button
-        android:id="@+id/registerButton"
+    <EditText
+        android:id="@+id/password_ck"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register" />
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edittext_bg"
+        android:drawableStart="@drawable/baseline_lock_24"
+        android:drawableLeft="@drawable/baseline_lock_24"
+        android:drawableEnd="@drawable/baseline_visibility_24"
+        android:drawableRight="@drawable/baseline_visibility_24"
+        android:drawablePadding="16dp"
+        android:hint="请确认密码"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textSize="14sp" />
+
+    <android.widget.Button
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/white"
+        android:text="注册"
+        android:textSize="18sp"/>
+
+    <android.widget.Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg_orange"
+        android:textColor="@color/white"
+        android:text="返回"
+        android:textSize="18sp"
+        android:onClick="jumpToLogin"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="© 2024 Group5"
+            android:textSize="14sp"
+            android:textColor="@color/Grey"/>
+
+    </LinearLayout>
+
 </LinearLayout>

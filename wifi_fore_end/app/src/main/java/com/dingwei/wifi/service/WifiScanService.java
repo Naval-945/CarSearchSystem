@@ -1,5 +1,6 @@
 package com.dingwei.wifi.service;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -7,6 +8,8 @@ import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.pm.ServiceInfo;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
@@ -16,11 +19,14 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 
 import com.dingwei.wifi.api.ApiService;
 import com.dingwei.wifi.api.RetrofitClient;
 import com.dingwei.wifi.api.model.ApiResponse;
+import com.dingwei.wifi.api.model.FingerPrint;
+import com.dingwei.wifi.api.model.LocationInfo;
 import com.dingwei.wifi.api.model.WifiData;
 
 import java.util.HashMap;
@@ -50,6 +56,14 @@ public class WifiScanService extends Service {
     private ApiService apiService;
     private Handler handler;
     private Runnable scanRunnable;
+    private StringBuffer mScanResultStr;    // 暂存WiFi扫描结果的字符串
+    private FingerPrint fingerPrint;
+    private final String BASE0 = "0e:69:6c:bd:e1:2b";//Redmi_0FA2
+    private final String BASE1 = "0e:69:6c:d4:3c:56";//CMCC-SSNS
+    private final String BASE2 = "0e:69:6c:d6:a4:c8";//computer1 wifi
+    private final String BASE3 = "0e:69:6c:d6:8c:03";//MERCURY_96CA
+    private final String BASE4 = "0e:69:6c:d6:9d:7c";
+    private final String BASE5 = "0e:69:6c:d6:98:ab";//G8 ThinQ
 
     @Nullable
     @Override
@@ -65,6 +79,7 @@ public class WifiScanService extends Service {
         createNotificationChannel(); // 创建通知通道
         startForeground(1, buildNotification(), ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION); // 启动前台服务，指定类型为位置服务
 
+        System.out.println("111");
         wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE); // 获取WifiManager实例
         Retrofit retrofit = RetrofitClient.getClient("http://123.249.15.162:8848/"); // 初始化Retrofit客户端
         apiService = retrofit.create(ApiService.class); // 创建ApiService实例
@@ -74,6 +89,47 @@ public class WifiScanService extends Service {
             @Override
             public void run() {
                 scanWifiNetworks(); // 扫描WiFi网络
+                mScanResultStr = new StringBuffer();
+                fingerPrint = new FingerPrint(0, 0, -100, -100, -100, -100, -100);
+                if (ActivityCompat.checkSelfPermission(WifiScanService.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
+                    return;
+                }
+                List<ScanResult> scanResults = wifiManager.getScanResults();
+                for (ScanResult sr : scanResults) {
+                    switch (sr.BSSID) {
+                        case BASE0:
+                            fingerPrint.setSs1(sr.level);
+                            break;
+                        case BASE1:
+                            fingerPrint.setSs2(sr.level);
+                            break;
+                        case BASE2:
+                            fingerPrint.setSs3(sr.level);
+                            break;
+                        case BASE3:
+                            fingerPrint.setSs4(sr.level);
+                            break;
+                        case BASE4:
+                            fingerPrint.setSs5(sr.level);
+                            break;
+                        case BASE5:
+                            fingerPrint.setSs6(sr.level);
+                            break;
+
+
+                    }
+                    mScanResultStr.append("SSID: ").append(sr.SSID).append("\n");
+                    mScanResultStr.append("MAC Address: ").append(sr.BSSID).append("\n");
+                    mScanResultStr.append("Signal Strength(dBm): ").append(sr.level).append("\n\n");
+                    Log.d(TAG, "SSID:" + sr.SSID + "  MAC Address: " + sr.BSSID + "  Signal Strength:" + sr.level);
+                }
                 handler.postDelayed(this, 10000); // 每10秒执行一次扫描任务
             }
         };
@@ -122,13 +178,23 @@ public class WifiScanService extends Service {
     }
 
     private void sendWifiInfoToServer(WifiData wifiData) {
-        Call<ApiResponse<Integer>> call = apiService.sendWifiData(wifiData);
-        call.enqueue(new Callback<ApiResponse<Integer>>() {
+        System.out.println("222");
+        Call<ApiResponse<LocationInfo>> call = apiService.sendWifiData(wifiData);
+        call.enqueue(new Callback<ApiResponse<LocationInfo>>() {
             @Override
-            public void onResponse(@NonNull Call<ApiResponse<Integer>> call, @NonNull Response<ApiResponse<Integer>> response) {
+            public void onResponse(@NonNull Call<ApiResponse<LocationInfo>> call, @NonNull Response<ApiResponse<LocationInfo>> response) {
                 if (response.isSuccessful()) {
                     Log.d(TAG, "WiFi data sent successfully.");
-                    int location = response.body().getData();
+                    LocationInfo location = response.body().getData();
+//                    SharedPreferences sharedPreferences = getSharedPreferences("xy", Context.MODE_PRIVATE);
+//                    float x = (float) location.getX();
+//                    float y = (float) location.getY();
+//
+//                    SharedPreferences.Editor editor = sharedPreferences.edit();
+//                    editor.putFloat("x", x);
+//                    editor.putFloat("y", y);
+//                    editor.apply();
+
                     Log.d(TAG, "Received location: " + location);
                     //处理位置信息
                 } else {
@@ -137,7 +203,7 @@ public class WifiScanService extends Service {
             }
 
             @Override
-            public void onFailure(@NonNull Call<ApiResponse<Integer>> call, @NonNull Throwable t) {
+            public void onFailure(@NonNull Call<ApiResponse<LocationInfo>> call, @NonNull Throwable t) {
                 Log.e(TAG, "Error sending WiFi info to server: " + t.getMessage());
             }
         });
