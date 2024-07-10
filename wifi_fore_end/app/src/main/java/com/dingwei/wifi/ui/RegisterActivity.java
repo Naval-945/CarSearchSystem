@@ -25,6 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private EditText usernameEditText;
     private EditText passwordEditText;
+    private EditText confirm_pwdEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +34,22 @@ public class RegisterActivity extends AppCompatActivity {
 
         usernameEditText = findViewById(R.id.registerUsername);
         passwordEditText = findViewById(R.id.registerPassword);
+        confirm_pwdEditText=findViewById(R.id.password_ck);
+
         Button registerButton = findViewById(R.id.registerButton);
 
         registerButton.setOnClickListener(view -> {
             String username = usernameEditText.getText().toString();
             String password = passwordEditText.getText().toString();
-            registerUser(username, password);
+            String confirm_pwd=confirm_pwdEditText.getText().toString();
+
+            if(password.equals(confirm_pwd)){
+                registerUser(username, password);
+            }else{
+                Toast.makeText(this,"两次输入的密码不一致",Toast.LENGTH_SHORT).show();
+            }
+
+
         });
     }
 
