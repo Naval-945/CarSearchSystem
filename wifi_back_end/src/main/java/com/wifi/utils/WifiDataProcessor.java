@@ -1,4 +1,4 @@
-package com.wifi.util;
+package com.wifi.utils;
 
 import com.wifi.dto.LocationInfo;
 import com.wifi.dto.WifiData;

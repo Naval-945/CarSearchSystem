@@ -1,6 +1,7 @@
 package com.dingwei.wifi.api;
 
 import com.dingwei.wifi.api.model.ApiResponse;
+import com.dingwei.wifi.api.model.EmailRequest;
 import com.dingwei.wifi.api.model.LocationInfo;
 import com.dingwei.wifi.api.model.LoginRequest;
 import com.dingwei.wifi.api.model.RegisterRequest;
@@ -22,5 +23,7 @@ public interface ApiService {
     @POST("/api/wifi")
     Call<ApiResponse<LocationInfo>> sendWifiData(@Body WifiData wifiData);
 
+    @POST("/api/send-token")
+    Call<ApiResponse<String>> sendCaptcha(@Body EmailRequest emailRequest);
 }
 

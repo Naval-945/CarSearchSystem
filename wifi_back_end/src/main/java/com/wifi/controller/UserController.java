@@ -1,6 +1,7 @@
 package com.wifi.controller;
 
 import com.wifi.entity.User;
+import com.wifi.request.EmailRequest;
 import com.wifi.request.LoginRequest;
 import com.wifi.request.RegisterRequest;
 import com.wifi.response.ApiResponse;
@@ -26,17 +27,19 @@ public class UserController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
-
     @Autowired
     private UserService userService;
 
     @PostMapping("/register")
     public ResponseEntity<ApiResponse<User>> registerUser(@RequestBody RegisterRequest request) {
+
         String username = request.getUsername();
         String password = request.getPassword();
+        String email = request.getEmail();
+        String token = request.getToken();
 
         try {
-            User user = userService.registerUser(username, password);
+            User user = userService.registerUser(username, password, email, token);
             logger.info("User registration successful: {}", user.toString());
             return ResponseHelper.success("Registration successful", user);
         } catch (RuntimeException e) {
@@ -44,19 +47,31 @@ public class UserController {
             return ResponseHelper.error(HttpStatus.BAD_REQUEST, e.getMessage());
         }
     }
+    
+    @PostMapping("/send-token")
+    public ResponseEntity<ApiResponse<String>> sendVerificationToken(@RequestBody EmailRequest request) {
+        try {
+            String email = request.getEmail();
+            String token = userService.sendVerificationToken(email);
+            return ResponseHelper.success("Verification token sent", token);
+        } catch (RuntimeException e) {
+            logger.error("Failed to send verification token: {}", e.getMessage());
+            return ResponseHelper.error(HttpStatus.BAD_REQUEST, e.getMessage());
+        }
+    }
 
     @PostMapping("/login")
     public ResponseEntity<ApiResponse<User>> loginUser(@RequestBody LoginRequest request) {
-        String username = request.getUsername();
+        String identifier = request.getIdentifier();
         String password = request.getPassword();
         //for test
-        System.out.println("username: " + username + ", password: " + password);
+        System.out.println("identifier: " + identifier + ", password: " + password);
 
-        try{
-            logger.info("User login request: username={}, password={}", username, password);
-            User user = userService.loginUser(username, password);
+        try {
+            logger.info("User login request: identifier={}, password={}", identifier, password);
+            User user = userService.loginUser(identifier, password);
             return ResponseHelper.success("Login successful", user);
-        }catch(RuntimeException e){
+        } catch (RuntimeException e) {
             logger.info("User login failed: {}", e.getMessage());
             return ResponseHelper.error(HttpStatus.UNAUTHORIZED, e.getMessage());
         }

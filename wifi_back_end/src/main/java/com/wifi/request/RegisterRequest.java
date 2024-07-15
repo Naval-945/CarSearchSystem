@@ -8,12 +8,16 @@ import lombok.Setter;
 public class RegisterRequest {
     private String username;
     private String password;
+    private String email;
+    private String token;
 
     public RegisterRequest() {}
 
-    public RegisterRequest(String username, String password) {
+    public RegisterRequest(String username, String password, String email, String token) {
         this.username = username;
         this.password = password;
+        this.email = email;
+        this.token = token;
     }
 }
 

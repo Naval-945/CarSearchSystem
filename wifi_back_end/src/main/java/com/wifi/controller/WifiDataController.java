@@ -4,8 +4,8 @@ import com.wifi.dto.LocationInfo;
 import com.wifi.dto.WifiData;
 import com.wifi.response.ApiResponse;
 import com.wifi.response.ResponseHelper;
-import com.wifi.util.FingerPrint;
-import com.wifi.util.WifiDataProcessor;
+import com.wifi.utils.FingerPrint;
+import com.wifi.utils.WifiDataProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -43,9 +43,6 @@ public class WifiDataController {
 
         // 调用算法处理WiFi数据
         LocationInfo location = wifiDataProcessor.processWifiData(wifiData);
-
         return ResponseHelper.success("WiFi data received and processed", location);
-
     }
-
 }

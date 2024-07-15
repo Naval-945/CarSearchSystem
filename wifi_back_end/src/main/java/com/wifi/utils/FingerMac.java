@@ -1,6 +1,4 @@
-package com.wifi.util;
-
-import lombok.Getter;
+package com.wifi.utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,7 +9,7 @@ import java.util.List;
  * 每个指纹对应一个MAC地址列表
  */
 
-@Getter
+
 public class FingerMac {
     private final List<List<Integer>> macAddressData;
 
@@ -48,6 +46,16 @@ public class FingerMac {
         addFingerData("f23", Arrays.asList(-67, -255, -73, -79, -77, -67));
         addFingerData("f24", Arrays.asList(-73, -255, -67, -82, -74, -69));
         addFingerData("f25", Arrays.asList(-68, -255, -68, -80, -77, -70));
+        addFingerData("f26", Arrays.asList(-255, -74, -63, -38, -255, -255));
+        addFingerData("f27", Arrays.asList(-255, -84, -80, -255, -255, -255));
+        addFingerData("f28", Arrays.asList(-255, -255, -79, -255, -255, -255));
+        addFingerData("f29", Arrays.asList(-255, -84, -78, -48, -255, -255));
+        addFingerData("f30", Arrays.asList(-255, -80, -79, -255, -255, -255));
+    }
+
+
+    public List<List<Integer>> getMacAddressData() {
+        return macAddressData;
     }
 
     public void addFingerData(String fingerprintId, List<Integer> macValues) {

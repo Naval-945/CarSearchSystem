@@ -1,5 +1,5 @@
 [versions]
-agp = "8.4.0"
+agp = "8.5.0"
 appcompatV7 = "28.0.0"
 constraintLayoutVersion = "2.0.4"
 converterGsonVersion = "2.6.2"

@@ -1,7 +1,8 @@
-package com.wifi.util;
+package com.wifi.utils;
 
 import com.wifi.dto.LocationInfo;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -13,12 +14,7 @@ public class FingerPrint {
     private final FingerMac fingerMac;
     private final FingerInfo fingerInfo;
 
-//    public FingerPrint(FingerMac fingerMac, FingerInfo fingerInfo) {
-//        this.fingerMac = fingerMac;
-//        this.fingerInfo = fingerInfo;
-//    }
-//
-//    public FingerPrint() {}
+
     public FingerPrint(){
         this.fingerMac = new FingerMac();
         this.fingerInfo = new FingerInfo();
@@ -51,11 +47,30 @@ public class FingerPrint {
 
     //根据传入的键值导出需要的一维强度数组
     public int[] processWifiData(Map<String, Integer> wifiData) {
-        int[] dataArray = new int[wifiData.size()];
-        int i = 0;
-        for (Integer rssi : wifiData.values()) {
-            dataArray[i++] = rssi;
+        // 初始化一个长度为6的数组，所有值默认为-255
+        int[] dataArray = new int[6];
+        Arrays.fill(dataArray, -255);
+
+        // 定义MAC地址的顺序
+        String[] bssids = {
+                "0e:69:6c:bd:e1:2b", // 索引0
+                "0e:69:6c:d4:3c:56", // 索引1
+                "0e:69:6c:d6:a4:c8", // 索引2
+                "0e:69:6c:d6:8c:03", // 索引3
+                "0e:69:6c:d6:9d:7c", // 索引4
+                "0e:69:6c:d6:98:ab"  // 索引5
+        };
+
+        // 遍历传入的wifiData，将强度值放到正确的数组位置上
+        for (Map.Entry<String, Integer> entry : wifiData.entrySet()) {
+            for (int j = 0; j < bssids.length; j++) {
+                if (entry.getKey().equalsIgnoreCase(bssids[j])) {
+                    dataArray[j] = entry.getValue();
+                    break; // 找到匹配项后退出循环
+                }
+            }
         }
+
         return dataArray;
     }
 
@@ -68,8 +83,8 @@ public class FingerPrint {
             // 使用指纹ID获取位置信息
             Map<String, String> locationData = fingerInfo.getFingerprintData(fingerprintId);
             return new LocationInfo(
-                    Integer.parseInt(locationData.get("XCoordinate")),
-                    Integer.parseInt(locationData.get("YCoordinate")),
+                    Float.parseFloat(locationData.get("XCoordinate")),
+                    Float.parseFloat(locationData.get("YCoordinate")),
                     locationData.get("ParkingSpot")
             );
         } else {

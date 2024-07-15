@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "WifiScanService created");
+        Log.d(TAG, "LoginActivity created");
         setContentView(R.layout.activity_login);
 
         usernameEditText = findViewById(R.id.username);
@@ -117,6 +117,7 @@ public class LoginActivity extends AppCompatActivity {
                         Log.i(TAG, "Login successful: " + user.getUsername());
                         Toast.makeText(LoginActivity.this, "登录成功！欢迎 " + user.getUsername(), Toast.LENGTH_LONG).show();
 
+                        //在这里启用wifi扫描
                         Intent serviceIntent = new Intent(LoginActivity.this, WifiScanService.class);
                         startForegroundService(serviceIntent);
 

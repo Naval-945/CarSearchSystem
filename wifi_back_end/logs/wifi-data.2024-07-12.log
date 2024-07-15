@@ -1,0 +1,78 @@
+2024-07-12 14:54:59 - Could not detect default configuration classes for test class [com.wifi.WifiApplicationTests]: WifiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-12 14:55:00 - Found @SpringBootConfiguration com.wifi.WifiApplication for test class com.wifi.WifiApplicationTests
+2024-07-12 14:55:00 - Starting WifiApplicationTests using Java 17.0.11 with PID 21460 (started by WT in E:\IdeaProjects\wifi)
+2024-07-12 14:55:00 - No active profile set, falling back to 1 default profile: "default"
+2024-07-12 14:55:01 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-12 14:55:01 - Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
+2024-07-12 14:55:01 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-12 14:55:01 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-12 14:55:01 - HHH000026: Second-level cache disabled
+2024-07-12 14:55:01 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-12 14:55:01 - HikariPool-1 - Starting...
+2024-07-12 14:55:02 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19d27c27
+2024-07-12 14:55:02 - HikariPool-1 - Start completed.
+2024-07-12 14:55:02 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-12 14:55:02 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12 14:55:03 - 
+
+Using generated security password: 819a1560-6148-4865-a153-214d47345090
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-12 14:55:03 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34074149, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f7bf0f6, org.springframework.security.web.context.SecurityContextHolderFilter@6de2344a, org.springframework.security.web.header.HeaderWriterFilter@2723b0d0, org.springframework.web.filter.CorsFilter@45430a27, org.springframework.security.web.authentication.logout.LogoutFilter@68303aad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18ed9480, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a9f8c2f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b83fac3, org.springframework.security.web.access.ExceptionTranslationFilter@53b83897, org.springframework.security.web.access.intercept.AuthorizationFilter@e30a8ef]
+2024-07-12 14:55:03 - Started WifiApplicationTests in 3.624 seconds (process running for 4.614)
+2024-07-12 14:55:04 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12 14:55:04 - HikariPool-1 - Shutdown initiated...
+2024-07-12 14:55:04 - HikariPool-1 - Shutdown completed.
+2024-07-12 15:47:15 - Could not detect default configuration classes for test class [com.wifi.WifiApplicationTests]: WifiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-12 15:47:15 - Found @SpringBootConfiguration com.wifi.WifiApplication for test class com.wifi.WifiApplicationTests
+2024-07-12 15:47:16 - Starting WifiApplicationTests using Java 17.0.11 with PID 23692 (started by WT in E:\IdeaProjects\wifi)
+2024-07-12 15:47:16 - No active profile set, falling back to 1 default profile: "default"
+2024-07-12 15:47:16 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-12 15:47:16 - Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interface.
+2024-07-12 15:47:17 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-12 15:47:17 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-12 15:47:17 - HHH000026: Second-level cache disabled
+2024-07-12 15:47:17 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-12 15:47:17 - HikariPool-1 - Starting...
+2024-07-12 15:47:18 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6210666c
+2024-07-12 15:47:18 - HikariPool-1 - Start completed.
+2024-07-12 15:47:18 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-12 15:47:19 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12 15:47:19 - 
+
+Using generated security password: 1e5500dc-ee2a-4cba-8d73-d042f9b28f99
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-12 15:47:19 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@64a8851a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b27d03d, org.springframework.security.web.context.SecurityContextHolderFilter@53b83897, org.springframework.security.web.header.HeaderWriterFilter@61e34bec, org.springframework.web.filter.CorsFilter@687d31a9, org.springframework.security.web.authentication.logout.LogoutFilter@55a29589, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@372e972d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47d0195b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ce24203, org.springframework.security.web.access.ExceptionTranslationFilter@58cd6088, org.springframework.security.web.access.intercept.AuthorizationFilter@6abaa14b]
+2024-07-12 15:47:20 - Started WifiApplicationTests in 3.95 seconds (process running for 4.867)
+2024-07-12 15:47:20 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12 15:47:20 - HikariPool-1 - Shutdown initiated...
+2024-07-12 15:47:20 - HikariPool-1 - Shutdown completed.
+2024-07-12 15:56:27 - Could not detect default configuration classes for test class [com.wifi.WifiApplicationTests]: WifiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-12 15:56:27 - Found @SpringBootConfiguration com.wifi.WifiApplication for test class com.wifi.WifiApplicationTests
+2024-07-12 15:56:27 - Starting WifiApplicationTests using Java 17.0.11 with PID 27524 (started by WT in E:\IdeaProjects\wifi)
+2024-07-12 15:56:27 - No active profile set, falling back to 1 default profile: "default"
+2024-07-12 15:56:28 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-12 15:56:28 - Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interface.
+2024-07-12 15:56:28 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-12 15:56:28 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-12 15:56:29 - HHH000026: Second-level cache disabled
+2024-07-12 15:56:29 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-12 15:56:29 - HikariPool-1 - Starting...
+2024-07-12 15:56:29 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70485aa
+2024-07-12 15:56:29 - HikariPool-1 - Start completed.
+2024-07-12 15:56:30 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-12 15:56:30 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12 15:56:30 - 
+
+Using generated security password: 90ecf51e-0709-4e96-97c0-eb71e5c7899a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-12 15:56:31 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1500edf3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@759c53e5, org.springframework.security.web.context.SecurityContextHolderFilter@238c63df, org.springframework.security.web.header.HeaderWriterFilter@577dac16, org.springframework.web.filter.CorsFilter@28d37d43, org.springframework.security.web.authentication.logout.LogoutFilter@3b60be3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d96a895, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3445ddf2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c02cf78, org.springframework.security.web.access.ExceptionTranslationFilter@54d9b23a, org.springframework.security.web.access.intercept.AuthorizationFilter@3f7bf0f6]
+2024-07-12 15:56:31 - Started WifiApplicationTests in 3.724 seconds (process running for 4.557)
+2024-07-12 15:56:31 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12 15:56:31 - HikariPool-1 - Shutdown initiated...
+2024-07-12 15:56:31 - HikariPool-1 - Shutdown completed.

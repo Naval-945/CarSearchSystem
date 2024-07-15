@@ -2,11 +2,11 @@ package com.dingwei.wifi.api.model;
 
 public class LoginRequest {
 
-    private String username;
+    private String identifier;
     private String password;
 
     public LoginRequest(String username, String password) {
-        this.username = username;
+        this.identifier = username;
         this.password = password;
     }
 

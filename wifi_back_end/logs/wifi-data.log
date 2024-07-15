@@ -1,130 +1,1201 @@
-2024-07-09 15:22:13 - Could not detect default configuration classes for test class [com.wifi.WifiApplicationTests]: WifiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-07-09 15:22:13 - Found @SpringBootConfiguration com.wifi.WifiApplication for test class com.wifi.WifiApplicationTests
-2024-07-09 15:22:13 - Starting WifiApplicationTests using Java 17.0.11 with PID 27696 (started by WT in E:\IdeaProjects\wifi)
-2024-07-09 15:22:13 - No active profile set, falling back to 1 default profile: "default"
-2024-07-09 15:22:14 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-09 15:22:14 - Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interface.
-2024-07-09 15:22:14 - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-09 15:22:14 - HHH000412: Hibernate ORM core version 6.4.9.Final
-2024-07-09 15:22:14 - HHH000026: Second-level cache disabled
-2024-07-09 15:22:15 - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-09 15:22:15 - HikariPool-1 - Starting...
-2024-07-09 15:22:15 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@11ad095c
-2024-07-09 15:22:15 - HikariPool-1 - Start completed.
-2024-07-09 15:22:16 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-09 15:22:16 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-09 15:22:16 - 
+2024-07-13 15:32:07 - Starting WifiApplication using Java 17.0.11 with PID 27376 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 15:32:07 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 15:32:07 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 15:32:07 - Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+2024-07-13 15:32:07 - Tomcat initialized with port 8080 (http)
+2024-07-13 15:32:07 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 15:32:07 - Starting service [Tomcat]
+2024-07-13 15:32:07 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 15:32:07 - Initializing Spring embedded WebApplicationContext
+2024-07-13 15:32:07 - Root WebApplicationContext: initialization completed in 908 ms
+2024-07-13 15:32:08 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 15:32:08 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 15:32:08 - HHH000026: Second-level cache disabled
+2024-07-13 15:32:08 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 15:32:08 - HikariPool-1 - Starting...
+2024-07-13 15:32:08 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7da77305
+2024-07-13 15:32:08 - HikariPool-1 - Start completed.
+2024-07-13 15:32:09 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 15:32:09 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 15:32:09 - 
 
-Using generated security password: 35ff80f0-6602-4265-b674-9ab46fe1befd
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2024-07-09 15:22:17 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@29811d4d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28f081ad, org.springframework.security.web.context.SecurityContextHolderFilter@15ae31b, org.springframework.security.web.header.HeaderWriterFilter@372e972d, org.springframework.web.filter.CorsFilter@56fc2cea, org.springframework.security.web.authentication.logout.LogoutFilter@46067a74, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e729d46, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@238c63df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e30a8ef, org.springframework.security.web.access.ExceptionTranslationFilter@40625ac6, org.springframework.security.web.access.intercept.AuthorizationFilter@687d31a9]
-2024-07-09 15:22:17 - Started WifiApplicationTests in 3.884 seconds (process running for 4.723)
-2024-07-09 15:22:17 - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-09 15:22:17 - HikariPool-1 - Shutdown initiated...
-2024-07-09 15:22:17 - HikariPool-1 - Shutdown completed.
-2024-07-09 15:28:19 - Could not detect default configuration classes for test class [com.wifi.WifiApplicationTests]: WifiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-07-09 15:28:19 - Found @SpringBootConfiguration com.wifi.WifiApplication for test class com.wifi.WifiApplicationTests
-2024-07-09 15:28:19 - Starting WifiApplicationTests using Java 17.0.11 with PID 9592 (started by WT in E:\IdeaProjects\wifi)
-2024-07-09 15:28:19 - No active profile set, falling back to 1 default profile: "default"
-2024-07-09 15:28:19 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-09 15:28:20 - Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interface.
-2024-07-09 15:28:20 - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-09 15:28:20 - HHH000412: Hibernate ORM core version 6.4.9.Final
-2024-07-09 15:28:20 - HHH000026: Second-level cache disabled
-2024-07-09 15:28:20 - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-09 15:28:20 - HikariPool-1 - Starting...
-2024-07-09 15:28:21 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@628962e5
-2024-07-09 15:28:21 - HikariPool-1 - Start completed.
-2024-07-09 15:28:21 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-09 15:28:21 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-09 15:28:22 - 
-
-Using generated security password: 08a16cd1-6fee-4c22-b0c8-f5e5e2777d70
+Using generated security password: 793c0641-2211-49db-8de7-c378b2dc3aa8
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2024-07-09 15:28:22 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@759c53e5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28d37d43, org.springframework.security.web.context.SecurityContextHolderFilter@192b76a4, org.springframework.security.web.header.HeaderWriterFilter@18ed9480, org.springframework.web.filter.CorsFilter@2c02cf78, org.springframework.security.web.authentication.logout.LogoutFilter@2f3565c0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@309b8144, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27b84c9a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e7fc07e, org.springframework.security.web.access.ExceptionTranslationFilter@15ae31b, org.springframework.security.web.access.intercept.AuthorizationFilter@45430a27]
-2024-07-09 15:28:22 - Started WifiApplicationTests in 3.566 seconds (process running for 4.361)
-2024-07-09 15:28:23 - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-09 15:28:23 - HikariPool-1 - Shutdown initiated...
-2024-07-09 15:28:23 - HikariPool-1 - Shutdown completed.
-2024-07-09 22:25:44 - Could not detect default configuration classes for test class [com.wifi.WifiApplicationTests]: WifiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-07-09 22:25:44 - Found @SpringBootConfiguration com.wifi.WifiApplication for test class com.wifi.WifiApplicationTests
-2024-07-09 22:25:45 - Starting WifiApplicationTests using Java 17.0.11 with PID 22512 (started by WT in E:\IdeaProjects\wifi)
-2024-07-09 22:25:45 - No active profile set, falling back to 1 default profile: "default"
-2024-07-09 22:25:45 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-09 22:25:45 - Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interface.
-2024-07-09 22:25:46 - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-09 22:25:46 - HHH000412: Hibernate ORM core version 6.4.9.Final
-2024-07-09 22:25:46 - HHH000026: Second-level cache disabled
-2024-07-09 22:25:46 - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-09 22:25:46 - HikariPool-1 - Starting...
-2024-07-09 22:25:47 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6181bc4a
-2024-07-09 22:25:47 - HikariPool-1 - Start completed.
-2024-07-09 22:25:47 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-09 22:25:47 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-09 22:25:48 - 
+2024-07-13 15:32:09 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@e75bae7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3531509c, org.springframework.security.web.context.SecurityContextHolderFilter@32029cd, org.springframework.security.web.header.HeaderWriterFilter@4ef0bc5b, org.springframework.web.filter.CorsFilter@23169374, org.springframework.security.web.authentication.logout.LogoutFilter@648f48d3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55bafbc1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@732bb49d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f2b1a2f, org.springframework.security.web.access.ExceptionTranslationFilter@1f3f0d25, org.springframework.security.web.access.intercept.AuthorizationFilter@4f9e9c21]
+2024-07-13 15:32:09 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 15:32:10 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 15:32:10 - Started WifiApplication in 3.221 seconds (process running for 3.821)
+2024-07-13 15:35:58 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-13 15:35:58 - Initializing Servlet 'dispatcherServlet'
+2024-07-13 15:35:58 - Completed initialization in 0 ms
+2024-07-13 15:35:58 - SQL Error: 1406, SQLState: 22001
+2024-07-13 15:35:58 - Data truncation: Data too long for column 'email' at row 1
+2024-07-13 15:35:58 - Failed to send verification token: could not execute statement [Data truncation: Data too long for column 'email' at row 1] [insert into verification_token (email,expiry_date,token) values (?,?,?)]; SQL [insert into verification_token (email,expiry_date,token) values (?,?,?)]
+2024-07-13 15:36:19 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 15:36:19 - HikariPool-1 - Shutdown initiated...
+2024-07-13 15:36:19 - HikariPool-1 - Shutdown completed.
+2024-07-13 15:36:57 - Starting WifiApplication using Java 17.0.11 with PID 644 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 15:36:57 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 15:36:57 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 15:36:57 - Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
+2024-07-13 15:36:58 - Tomcat initialized with port 8080 (http)
+2024-07-13 15:36:58 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 15:36:58 - Starting service [Tomcat]
+2024-07-13 15:36:58 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 15:36:58 - Initializing Spring embedded WebApplicationContext
+2024-07-13 15:36:58 - Root WebApplicationContext: initialization completed in 717 ms
+2024-07-13 15:36:58 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 15:36:58 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 15:36:58 - HHH000026: Second-level cache disabled
+2024-07-13 15:36:58 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 15:36:58 - HikariPool-1 - Starting...
+2024-07-13 15:36:58 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76db9048
+2024-07-13 15:36:58 - HikariPool-1 - Start completed.
+2024-07-13 15:36:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 15:36:59 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 15:36:59 - 
 
-Using generated security password: 1bfcbe40-4375-4715-90d2-70171c7b8aa0
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2024-07-09 22:25:48 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3f7bf0f6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45430a27, org.springframework.security.web.context.SecurityContextHolderFilter@577dac16, org.springframework.security.web.header.HeaderWriterFilter@7137cd14, org.springframework.web.filter.CorsFilter@1b83fac3, org.springframework.security.web.authentication.logout.LogoutFilter@37a36194, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fb05c07, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@662b199, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1500edf3, org.springframework.security.web.access.ExceptionTranslationFilter@28ffa527, org.springframework.security.web.access.intercept.AuthorizationFilter@2ffaa711]
-2024-07-09 22:25:48 - Started WifiApplicationTests in 3.901 seconds (process running for 4.855)
-2024-07-09 22:25:49 - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-09 22:25:49 - HikariPool-1 - Shutdown initiated...
-2024-07-09 22:25:49 - HikariPool-1 - Shutdown completed.
-2024-07-09 22:26:26 - Could not detect default configuration classes for test class [com.wifi.WifiApplicationTests]: WifiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-07-09 22:26:26 - Found @SpringBootConfiguration com.wifi.WifiApplication for test class com.wifi.WifiApplicationTests
-2024-07-09 22:26:27 - Starting WifiApplicationTests using Java 17.0.11 with PID 4424 (started by WT in E:\IdeaProjects\wifi)
-2024-07-09 22:26:27 - No active profile set, falling back to 1 default profile: "default"
-2024-07-09 22:26:27 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-09 22:26:27 - Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interface.
-2024-07-09 22:26:28 - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-09 22:26:28 - HHH000412: Hibernate ORM core version 6.4.9.Final
-2024-07-09 22:26:28 - HHH000026: Second-level cache disabled
-2024-07-09 22:26:28 - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-09 22:26:28 - HikariPool-1 - Starting...
-2024-07-09 22:26:28 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@280ecc33
-2024-07-09 22:26:28 - HikariPool-1 - Start completed.
-2024-07-09 22:26:29 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-09 22:26:29 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-09 22:26:30 - 
-
-Using generated security password: 596480d7-d74f-4c08-8275-4079f58561c0
+Using generated security password: 76b7d782-aa12-4419-bb34-beac583ae5cf
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2024-07-09 22:26:30 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1259b2a5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6779af40, org.springframework.security.web.context.SecurityContextHolderFilter@1cdb280b, org.springframework.security.web.header.HeaderWriterFilter@425a5c2e, org.springframework.web.filter.CorsFilter@7cf166db, org.springframework.security.web.authentication.logout.LogoutFilter@600a1270, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f8a44a4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@28ffa527, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@68303aad, org.springframework.security.web.access.ExceptionTranslationFilter@3ba50851, org.springframework.security.web.access.intercept.AuthorizationFilter@46067a74]
-2024-07-09 22:26:30 - Started WifiApplicationTests in 3.622 seconds (process running for 4.513)
-2024-07-09 22:26:31 - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-09 22:26:31 - HikariPool-1 - Shutdown initiated...
-2024-07-09 22:26:31 - HikariPool-1 - Shutdown completed.
-2024-07-09 22:43:07 - Could not detect default configuration classes for test class [com.wifi.WifiApplicationTests]: WifiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-07-09 22:43:07 - Found @SpringBootConfiguration com.wifi.WifiApplication for test class com.wifi.WifiApplicationTests
-2024-07-09 22:43:08 - Starting WifiApplicationTests using Java 17.0.11 with PID 22000 (started by WT in E:\IdeaProjects\wifi)
-2024-07-09 22:43:08 - No active profile set, falling back to 1 default profile: "default"
-2024-07-09 22:43:08 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-09 22:43:08 - Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interface.
-2024-07-09 22:43:09 - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-09 22:43:09 - HHH000412: Hibernate ORM core version 6.4.9.Final
-2024-07-09 22:43:09 - HHH000026: Second-level cache disabled
-2024-07-09 22:43:09 - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-09 22:43:09 - HikariPool-1 - Starting...
-2024-07-09 22:43:09 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e06ec83
-2024-07-09 22:43:09 - HikariPool-1 - Start completed.
-2024-07-09 22:43:10 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-09 22:43:10 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-09 22:43:10 - 
+2024-07-13 15:36:59 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2a738d47, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6939f18a, org.springframework.security.web.context.SecurityContextHolderFilter@1aba8978, org.springframework.security.web.header.HeaderWriterFilter@4fce655d, org.springframework.web.filter.CorsFilter@8bd9d08, org.springframework.security.web.authentication.logout.LogoutFilter@4a778943, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@487ee2a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ef0bc5b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@189f3ccd, org.springframework.security.web.access.ExceptionTranslationFilter@5ee76cf2, org.springframework.security.web.access.intercept.AuthorizationFilter@30ce78e3]
+2024-07-13 15:36:59 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 15:36:59 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 15:36:59 - Started WifiApplication in 2.589 seconds (process running for 3.035)
+2024-07-13 15:37:33 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-13 15:37:33 - Initializing Servlet 'dispatcherServlet'
+2024-07-13 15:37:33 - Completed initialization in 1 ms
+2024-07-13 15:37:33 - Failed to send verification token: Failed to send verification email: Could not parse mail
+2024-07-13 15:52:20 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m52s43ms31µs300ns).
+2024-07-13 15:57:40 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 15:57:40 - HikariPool-1 - Shutdown initiated...
+2024-07-13 15:57:41 - HikariPool-1 - Shutdown completed.
+2024-07-13 15:57:42 - Starting WifiApplication using Java 17.0.11 with PID 10748 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 15:57:42 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 15:57:43 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 15:57:43 - Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2024-07-13 15:57:43 - Tomcat initialized with port 8080 (http)
+2024-07-13 15:57:43 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 15:57:43 - Starting service [Tomcat]
+2024-07-13 15:57:43 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 15:57:43 - Initializing Spring embedded WebApplicationContext
+2024-07-13 15:57:43 - Root WebApplicationContext: initialization completed in 718 ms
+2024-07-13 15:57:43 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 15:57:43 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 15:57:43 - HHH000026: Second-level cache disabled
+2024-07-13 15:57:43 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 15:57:43 - HikariPool-1 - Starting...
+2024-07-13 15:57:43 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@574ebdaf
+2024-07-13 15:57:43 - HikariPool-1 - Start completed.
+2024-07-13 15:57:44 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 15:57:44 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 15:57:44 - 
 
-Using generated security password: b64e9e27-d43d-45ca-a923-97492d1b9d94
+Using generated security password: edca9803-1571-4e5b-9f0f-087d2ed2700e
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2024-07-09 22:43:11 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1500edf3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@759c53e5, org.springframework.security.web.context.SecurityContextHolderFilter@238c63df, org.springframework.security.web.header.HeaderWriterFilter@577dac16, org.springframework.web.filter.CorsFilter@28d37d43, org.springframework.security.web.authentication.logout.LogoutFilter@3b60be3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d96a895, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3445ddf2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c02cf78, org.springframework.security.web.access.ExceptionTranslationFilter@54d9b23a, org.springframework.security.web.access.intercept.AuthorizationFilter@3f7bf0f6]
-2024-07-09 22:43:11 - Started WifiApplicationTests in 3.456 seconds (process running for 4.28)
-2024-07-09 22:43:11 - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-09 22:43:11 - HikariPool-1 - Shutdown initiated...
-2024-07-09 22:43:11 - HikariPool-1 - Shutdown completed.
+2024-07-13 15:57:44 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6bf34912, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1bcdd302, org.springframework.security.web.context.SecurityContextHolderFilter@49616310, org.springframework.security.web.header.HeaderWriterFilter@69efdfd9, org.springframework.web.filter.CorsFilter@648f48d3, org.springframework.security.web.authentication.logout.LogoutFilter@1b84d03d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6662974a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@261b27db, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30ce78e3, org.springframework.security.web.access.ExceptionTranslationFilter@5b01b3f8, org.springframework.security.web.access.intercept.AuthorizationFilter@6fc3f1a7]
+2024-07-13 15:57:45 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 15:57:45 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 15:57:45 - Started WifiApplication in 2.589 seconds (process running for 3.028)
+2024-07-13 15:58:00 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-13 15:58:00 - Initializing Servlet 'dispatcherServlet'
+2024-07-13 15:58:00 - Completed initialization in 1 ms
+2024-07-13 15:58:00 - Failed to send verification token: Failed to send verification email: Could not parse mail
+2024-07-13 15:58:36 - Failed to send verification token: Failed to send verification email: Could not parse mail
+2024-07-13 16:00:04 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:00:04 - HikariPool-1 - Shutdown initiated...
+2024-07-13 16:00:04 - HikariPool-1 - Shutdown completed.
+2024-07-13 16:00:07 - Starting WifiApplication using Java 17.0.11 with PID 3588 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 16:00:07 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 16:00:08 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 16:00:08 - Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+2024-07-13 16:00:08 - Tomcat initialized with port 8080 (http)
+2024-07-13 16:00:08 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:00:08 - Starting service [Tomcat]
+2024-07-13 16:00:08 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 16:00:08 - Initializing Spring embedded WebApplicationContext
+2024-07-13 16:00:08 - Root WebApplicationContext: initialization completed in 714 ms
+2024-07-13 16:00:08 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 16:00:08 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 16:00:08 - HHH000026: Second-level cache disabled
+2024-07-13 16:00:08 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 16:00:08 - HikariPool-1 - Starting...
+2024-07-13 16:00:08 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@574ebdaf
+2024-07-13 16:00:08 - HikariPool-1 - Start completed.
+2024-07-13 16:00:09 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 16:00:09 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:00:09 - 
+
+Using generated security password: 32cc478a-09c8-4602-b4de-273f32075420
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 16:00:09 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6bf34912, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1bcdd302, org.springframework.security.web.context.SecurityContextHolderFilter@49616310, org.springframework.security.web.header.HeaderWriterFilter@69efdfd9, org.springframework.web.filter.CorsFilter@648f48d3, org.springframework.security.web.authentication.logout.LogoutFilter@1b84d03d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6662974a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@261b27db, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30ce78e3, org.springframework.security.web.access.ExceptionTranslationFilter@5b01b3f8, org.springframework.security.web.access.intercept.AuthorizationFilter@6fc3f1a7]
+2024-07-13 16:00:09 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:00:09 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 16:00:09 - Started WifiApplication in 2.532 seconds (process running for 2.983)
+2024-07-13 16:00:17 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-13 16:00:17 - Initializing Servlet 'dispatcherServlet'
+2024-07-13 16:00:17 - Completed initialization in 1 ms
+2024-07-13 16:00:17 - Failed to send verification token: Failed to send verification email: Could not parse mail
+2024-07-13 16:01:12 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:01:12 - HikariPool-1 - Shutdown initiated...
+2024-07-13 16:01:12 - HikariPool-1 - Shutdown completed.
+2024-07-13 16:01:15 - Starting WifiApplication using Java 17.0.11 with PID 4360 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 16:01:15 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 16:01:15 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 16:01:15 - Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
+2024-07-13 16:01:16 - Tomcat initialized with port 8080 (http)
+2024-07-13 16:01:16 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:01:16 - Starting service [Tomcat]
+2024-07-13 16:01:16 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 16:01:16 - Initializing Spring embedded WebApplicationContext
+2024-07-13 16:01:16 - Root WebApplicationContext: initialization completed in 715 ms
+2024-07-13 16:01:16 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 16:01:16 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 16:01:16 - HHH000026: Second-level cache disabled
+2024-07-13 16:01:16 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 16:01:16 - HikariPool-1 - Starting...
+2024-07-13 16:01:16 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@349f3ff7
+2024-07-13 16:01:16 - HikariPool-1 - Start completed.
+2024-07-13 16:01:17 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 16:01:17 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:01:17 - 
+
+Using generated security password: 0645c216-1206-4d45-a60d-66e6c330bf35
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 16:01:17 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6c120b00, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d8a2b1b, org.springframework.security.web.context.SecurityContextHolderFilter@2c1a0f82, org.springframework.security.web.header.HeaderWriterFilter@682482ee, org.springframework.web.filter.CorsFilter@2709e075, org.springframework.security.web.authentication.logout.LogoutFilter@44c54463, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1f3f0d25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24bc06dd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3328db4f, org.springframework.security.web.access.ExceptionTranslationFilter@2662e3ff, org.springframework.security.web.access.intercept.AuthorizationFilter@189f3ccd]
+2024-07-13 16:01:17 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:01:17 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 16:01:17 - Started WifiApplication in 2.565 seconds (process running for 3.004)
+2024-07-13 16:01:19 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-13 16:01:19 - Initializing Servlet 'dispatcherServlet'
+2024-07-13 16:01:19 - Completed initialization in 1 ms
+2024-07-13 16:01:19 - Failed to send verification token: Failed to send verification email: Could not parse mail
+2024-07-13 16:03:58 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:03:58 - HikariPool-1 - Shutdown initiated...
+2024-07-13 16:03:58 - HikariPool-1 - Shutdown completed.
+2024-07-13 16:04:01 - Starting WifiApplication using Java 17.0.11 with PID 12908 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 16:04:01 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 16:04:02 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 16:04:02 - Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+2024-07-13 16:04:02 - Tomcat initialized with port 8080 (http)
+2024-07-13 16:04:02 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:04:02 - Starting service [Tomcat]
+2024-07-13 16:04:02 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 16:04:02 - Initializing Spring embedded WebApplicationContext
+2024-07-13 16:04:02 - Root WebApplicationContext: initialization completed in 702 ms
+2024-07-13 16:04:02 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 16:04:02 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 16:04:02 - HHH000026: Second-level cache disabled
+2024-07-13 16:04:02 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 16:04:02 - HikariPool-1 - Starting...
+2024-07-13 16:04:02 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ecdf528
+2024-07-13 16:04:02 - HikariPool-1 - Start completed.
+2024-07-13 16:04:03 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 16:04:03 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:04:03 - 
+
+Using generated security password: b22f7044-4a21-4d51-be78-3f27e34b7eb4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 16:04:03 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f596988, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bf34912, org.springframework.security.web.context.SecurityContextHolderFilter@4a5c6b30, org.springframework.security.web.header.HeaderWriterFilter@27c49f54, org.springframework.web.filter.CorsFilter@1bcdd302, org.springframework.security.web.authentication.logout.LogoutFilter@2b569858, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ee76cf2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@682482ee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@648f48d3, org.springframework.security.web.access.ExceptionTranslationFilter@4246f904, org.springframework.security.web.access.intercept.AuthorizationFilter@64b20d9c]
+2024-07-13 16:04:03 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:04:03 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 16:04:03 - Started WifiApplication in 2.521 seconds (process running for 2.959)
+2024-07-13 16:04:04 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-13 16:04:04 - Initializing Servlet 'dispatcherServlet'
+2024-07-13 16:04:04 - Completed initialization in 0 ms
+2024-07-13 16:04:06 - Failed to send verification token: Failed to send verification email: Failed to close server connection after message failures. Failed messages: org.eclipse.angus.mail.smtp.SMTPSendFailedException: 501 Mail from address must be same as authorization user.
+;
+  nested exception is:
+	org.eclipse.angus.mail.smtp.SMTPSenderFailedException: 501 Mail from address must be same as authorization user.
+
+2024-07-13 16:04:17 - Failed to send verification token: Failed to send verification email: Failed to close server connection after message failures. Failed messages: org.eclipse.angus.mail.smtp.SMTPSendFailedException: 501 Mail from address must be same as authorization user.
+;
+  nested exception is:
+	org.eclipse.angus.mail.smtp.SMTPSenderFailedException: 501 Mail from address must be same as authorization user.
+
+2024-07-13 16:06:27 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:06:27 - HikariPool-1 - Shutdown initiated...
+2024-07-13 16:06:27 - HikariPool-1 - Shutdown completed.
+2024-07-13 16:06:30 - Starting WifiApplication using Java 17.0.11 with PID 456 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 16:06:30 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 16:06:31 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 16:06:31 - Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2024-07-13 16:06:31 - Tomcat initialized with port 8080 (http)
+2024-07-13 16:06:31 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:06:31 - Starting service [Tomcat]
+2024-07-13 16:06:31 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 16:06:31 - Initializing Spring embedded WebApplicationContext
+2024-07-13 16:06:31 - Root WebApplicationContext: initialization completed in 716 ms
+2024-07-13 16:06:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 16:06:31 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 16:06:31 - HHH000026: Second-level cache disabled
+2024-07-13 16:06:31 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 16:06:32 - HikariPool-1 - Starting...
+2024-07-13 16:06:32 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@377e573a
+2024-07-13 16:06:32 - HikariPool-1 - Start completed.
+2024-07-13 16:06:32 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 16:06:32 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:06:33 - 
+
+Using generated security password: 1c406353-7a2a-441f-b499-e5a10629bbfc
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 16:06:33 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@648f48d3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30ce78e3, org.springframework.security.web.context.SecurityContextHolderFilter@6662974a, org.springframework.security.web.header.HeaderWriterFilter@4a5c6b30, org.springframework.web.filter.CorsFilter@41041c31, org.springframework.security.web.authentication.logout.LogoutFilter@1e1d813a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@df5f657, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c1a0f82, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34a482d0, org.springframework.security.web.access.ExceptionTranslationFilter@69efdfd9, org.springframework.security.web.access.intercept.AuthorizationFilter@1f596988]
+2024-07-13 16:06:33 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:06:33 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 16:06:33 - Started WifiApplication in 2.599 seconds (process running for 3.044)
+2024-07-13 16:06:36 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-13 16:06:36 - Initializing Servlet 'dispatcherServlet'
+2024-07-13 16:06:36 - Completed initialization in 0 ms
+2024-07-13 16:13:17 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:13:17 - HikariPool-1 - Shutdown initiated...
+2024-07-13 16:13:17 - HikariPool-1 - Shutdown completed.
+2024-07-13 16:13:45 - Starting WifiApplication using Java 17.0.11 with PID 25304 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 16:13:45 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 16:13:45 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 16:13:45 - Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
+2024-07-13 16:13:45 - Tomcat initialized with port 8080 (http)
+2024-07-13 16:13:45 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:13:45 - Starting service [Tomcat]
+2024-07-13 16:13:45 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 16:13:45 - Initializing Spring embedded WebApplicationContext
+2024-07-13 16:13:45 - Root WebApplicationContext: initialization completed in 689 ms
+2024-07-13 16:13:46 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 16:13:46 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 16:13:46 - HHH000026: Second-level cache disabled
+2024-07-13 16:13:46 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 16:13:46 - HikariPool-1 - Starting...
+2024-07-13 16:13:46 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@574ebdaf
+2024-07-13 16:13:46 - HikariPool-1 - Start completed.
+2024-07-13 16:13:47 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 16:13:47 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:13:47 - 
+
+Using generated security password: 214e21b5-3209-4bcf-abed-fed5edaf311a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 16:13:47 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@648f48d3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30ce78e3, org.springframework.security.web.context.SecurityContextHolderFilter@6662974a, org.springframework.security.web.header.HeaderWriterFilter@4a5c6b30, org.springframework.web.filter.CorsFilter@41041c31, org.springframework.security.web.authentication.logout.LogoutFilter@1e1d813a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@df5f657, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c1a0f82, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34a482d0, org.springframework.security.web.access.ExceptionTranslationFilter@69efdfd9, org.springframework.security.web.access.intercept.AuthorizationFilter@1f596988]
+2024-07-13 16:13:47 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:13:47 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 16:13:47 - Started WifiApplication in 2.543 seconds (process running for 2.989)
+2024-07-13 16:13:57 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-13 16:13:57 - Initializing Servlet 'dispatcherServlet'
+2024-07-13 16:13:57 - Completed initialization in 0 ms
+2024-07-13 16:13:57 - SQL Error: 1062, SQLState: 23000
+2024-07-13 16:13:57 - Duplicate entry '2757582052@qq.com' for key 'verification_token.email'
+2024-07-13 16:13:57 - Failed to send verification token: could not execute statement [Duplicate entry '2757582052@qq.com' for key 'verification_token.email'] [insert into verification_token (email,expiry_date,token) values (?,?,?)]; SQL [insert into verification_token (email,expiry_date,token) values (?,?,?)]; constraint [verification_token.email]
+2024-07-13 16:16:06 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:16:06 - HikariPool-1 - Shutdown initiated...
+2024-07-13 16:16:06 - HikariPool-1 - Shutdown completed.
+2024-07-13 16:16:35 - Starting WifiApplication using Java 17.0.11 with PID 14964 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 16:16:35 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 16:16:36 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 16:16:36 - Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2024-07-13 16:16:36 - Tomcat initialized with port 8080 (http)
+2024-07-13 16:16:36 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:16:36 - Starting service [Tomcat]
+2024-07-13 16:16:36 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 16:16:36 - Initializing Spring embedded WebApplicationContext
+2024-07-13 16:16:36 - Root WebApplicationContext: initialization completed in 701 ms
+2024-07-13 16:16:36 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 16:16:36 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 16:16:36 - HHH000026: Second-level cache disabled
+2024-07-13 16:16:36 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 16:16:36 - HikariPool-1 - Starting...
+2024-07-13 16:16:37 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31e7afde
+2024-07-13 16:16:37 - HikariPool-1 - Start completed.
+2024-07-13 16:16:37 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 16:16:37 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:16:37 - 
+
+Using generated security password: 428bed05-13cd-4146-b006-5ced08dcd551
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 16:16:38 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@82382d1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c120b00, org.springframework.security.web.context.SecurityContextHolderFilter@175745fc, org.springframework.security.web.header.HeaderWriterFilter@487ee2a, org.springframework.web.filter.CorsFilter@d8a2b1b, org.springframework.security.web.authentication.logout.LogoutFilter@2027d56f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60e5db1d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55bafbc1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2709e075, org.springframework.security.web.access.ExceptionTranslationFilter@1aba8978, org.springframework.security.web.access.intercept.AuthorizationFilter@8bd9d08]
+2024-07-13 16:16:38 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:16:38 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 16:16:38 - Started WifiApplication in 2.508 seconds (process running for 2.964)
+2024-07-13 16:16:41 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-13 16:16:41 - Initializing Servlet 'dispatcherServlet'
+2024-07-13 16:16:41 - Completed initialization in 0 ms
+2024-07-13 16:17:29 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:17:29 - HikariPool-1 - Shutdown initiated...
+2024-07-13 16:17:29 - HikariPool-1 - Shutdown completed.
+2024-07-13 16:21:18 - Starting WifiApplication using Java 17.0.11 with PID 27168 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 16:21:18 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 16:21:19 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 16:21:19 - Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2024-07-13 16:21:19 - Tomcat initialized with port 8080 (http)
+2024-07-13 16:21:19 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:21:19 - Starting service [Tomcat]
+2024-07-13 16:21:19 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 16:21:19 - Initializing Spring embedded WebApplicationContext
+2024-07-13 16:21:19 - Root WebApplicationContext: initialization completed in 711 ms
+2024-07-13 16:21:19 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 16:21:19 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 16:21:19 - HHH000026: Second-level cache disabled
+2024-07-13 16:21:19 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 16:21:19 - HikariPool-1 - Starting...
+2024-07-13 16:21:20 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43ab9ae9
+2024-07-13 16:21:20 - HikariPool-1 - Start completed.
+2024-07-13 16:21:20 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 16:21:20 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:21:20 - 
+
+Using generated security password: 4297709a-c495-4d03-b97a-cd4cf177a902
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 16:21:20 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@77d42ed7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54da736e, org.springframework.security.web.context.SecurityContextHolderFilter@491f3fb0, org.springframework.security.web.header.HeaderWriterFilter@756030e2, org.springframework.web.filter.CorsFilter@2d398cfb, org.springframework.security.web.authentication.logout.LogoutFilter@2ca464bb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58a0f75b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a778943, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23307c6c, org.springframework.security.web.access.ExceptionTranslationFilter@623a891d, org.springframework.security.web.access.intercept.AuthorizationFilter@679886ad]
+2024-07-13 16:21:21 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:21:21 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 16:21:21 - Started WifiApplication in 2.584 seconds (process running for 3.029)
+2024-07-13 16:22:08 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:22:08 - HikariPool-1 - Shutdown initiated...
+2024-07-13 16:22:08 - HikariPool-1 - Shutdown completed.
+2024-07-13 16:22:11 - Starting WifiApplication using Java 17.0.11 with PID 22920 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 16:22:11 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 16:22:11 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 16:22:11 - Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2024-07-13 16:22:11 - Tomcat initialized with port 8080 (http)
+2024-07-13 16:22:11 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:22:11 - Starting service [Tomcat]
+2024-07-13 16:22:11 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 16:22:11 - Initializing Spring embedded WebApplicationContext
+2024-07-13 16:22:11 - Root WebApplicationContext: initialization completed in 720 ms
+2024-07-13 16:22:11 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 16:22:11 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 16:22:11 - HHH000026: Second-level cache disabled
+2024-07-13 16:22:12 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 16:22:12 - HikariPool-1 - Starting...
+2024-07-13 16:22:12 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20a47036
+2024-07-13 16:22:12 - HikariPool-1 - Start completed.
+2024-07-13 16:22:12 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 16:22:12 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:22:13 - 
+
+Using generated security password: 7ed34d9e-d919-4c4b-a1ca-afbdfe389398
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 16:22:13 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5625e7e1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59172d2, org.springframework.security.web.context.SecurityContextHolderFilter@134ec0f3, org.springframework.security.web.header.HeaderWriterFilter@623a891d, org.springframework.web.filter.CorsFilter@77d42ed7, org.springframework.security.web.authentication.logout.LogoutFilter@6e5df971, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@491f3fb0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c2e73ce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54da736e, org.springframework.security.web.access.ExceptionTranslationFilter@721fc228, org.springframework.security.web.access.intercept.AuthorizationFilter@4f63909f]
+2024-07-13 16:22:13 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:22:13 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 16:22:13 - Started WifiApplication in 2.567 seconds (process running for 3.045)
+2024-07-13 16:22:16 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-13 16:22:16 - Initializing Servlet 'dispatcherServlet'
+2024-07-13 16:22:16 - Completed initialization in 0 ms
+2024-07-13 16:22:16 - SQL Error: 1062, SQLState: 23000
+2024-07-13 16:22:16 - Duplicate entry '2757582052@qq.com' for key 'verification_token.email'
+2024-07-13 16:22:16 - Failed to send verification token: could not execute statement [Duplicate entry '2757582052@qq.com' for key 'verification_token.email'] [insert into verification_token (email,expiry_date,token) values (?,?,?)]; SQL [insert into verification_token (email,expiry_date,token) values (?,?,?)]; constraint [verification_token.email]
+2024-07-13 16:31:23 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m10s884ms514µs900ns).
+2024-07-13 16:32:17 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:32:17 - HikariPool-1 - Shutdown initiated...
+2024-07-13 16:32:17 - HikariPool-1 - Shutdown completed.
+2024-07-13 16:43:01 - Starting WifiApplication using Java 17.0.11 with PID 18484 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 16:43:01 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 16:43:01 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 16:43:01 - Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2024-07-13 16:43:02 - Tomcat initialized with port 8080 (http)
+2024-07-13 16:43:02 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:43:02 - Starting service [Tomcat]
+2024-07-13 16:43:02 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 16:43:02 - Initializing Spring embedded WebApplicationContext
+2024-07-13 16:43:02 - Root WebApplicationContext: initialization completed in 700 ms
+2024-07-13 16:43:02 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 16:43:02 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 16:43:02 - HHH000026: Second-level cache disabled
+2024-07-13 16:43:02 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 16:43:02 - HikariPool-1 - Starting...
+2024-07-13 16:43:02 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@144e36ae
+2024-07-13 16:43:02 - HikariPool-1 - Start completed.
+2024-07-13 16:43:03 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 16:43:03 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:43:03 - 
+
+Using generated security password: 7bfc2f1a-04eb-430c-b114-f6bafddac647
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 16:43:03 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@45dfb6a4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@202ba60a, org.springframework.security.web.context.SecurityContextHolderFilter@2b370ca9, org.springframework.security.web.header.HeaderWriterFilter@69ee0861, org.springframework.web.filter.CorsFilter@12ebcdf6, org.springframework.security.web.authentication.logout.LogoutFilter@d695f9d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59301546, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f5a1ad4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30dd23e2, org.springframework.security.web.access.ExceptionTranslationFilter@207f7baa, org.springframework.security.web.access.intercept.AuthorizationFilter@a5df98c]
+2024-07-13 16:43:03 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:43:03 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 16:43:03 - Started WifiApplication in 2.491 seconds (process running for 2.933)
+2024-07-13 16:43:04 - Unexpected error occurred in scheduled task
+org.springframework.dao.InvalidDataAccessApiUsageException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:400)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:246)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy114.deleteAllByExpiryDateBefore(Unknown Source)
+	at com.wifi.utils.VerificationTokenCleanupTask.cleanupExpiredTokens(VerificationTokenCleanupTask.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: jakarta.persistence.TransactionRequiredException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:303)
+	at jdk.proxy2/jdk.proxy2.$Proxy107.remove(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$DeleteExecution.doExecute(JpaQueryExecution.java:298)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 23 common frames omitted
+2024-07-13 16:44:03 - Unexpected error occurred in scheduled task
+org.springframework.dao.InvalidDataAccessApiUsageException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:400)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:246)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy114.deleteAllByExpiryDateBefore(Unknown Source)
+	at com.wifi.utils.VerificationTokenCleanupTask.cleanupExpiredTokens(VerificationTokenCleanupTask.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: jakarta.persistence.TransactionRequiredException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:303)
+	at jdk.proxy2/jdk.proxy2.$Proxy107.remove(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$DeleteExecution.doExecute(JpaQueryExecution.java:298)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 23 common frames omitted
+2024-07-13 16:45:03 - Unexpected error occurred in scheduled task
+org.springframework.dao.InvalidDataAccessApiUsageException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:400)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:246)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy114.deleteAllByExpiryDateBefore(Unknown Source)
+	at com.wifi.utils.VerificationTokenCleanupTask.cleanupExpiredTokens(VerificationTokenCleanupTask.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: jakarta.persistence.TransactionRequiredException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:303)
+	at jdk.proxy2/jdk.proxy2.$Proxy107.remove(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$DeleteExecution.doExecute(JpaQueryExecution.java:298)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 23 common frames omitted
+2024-07-13 16:46:00 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:46:00 - HikariPool-1 - Shutdown initiated...
+2024-07-13 16:46:00 - HikariPool-1 - Shutdown completed.
+2024-07-13 16:46:40 - Starting WifiApplication using Java 17.0.11 with PID 3848 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 16:46:40 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 16:46:41 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 16:46:41 - Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+2024-07-13 16:46:41 - Tomcat initialized with port 8080 (http)
+2024-07-13 16:46:41 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:46:41 - Starting service [Tomcat]
+2024-07-13 16:46:41 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 16:46:41 - Initializing Spring embedded WebApplicationContext
+2024-07-13 16:46:41 - Root WebApplicationContext: initialization completed in 692 ms
+2024-07-13 16:46:41 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 16:46:41 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 16:46:41 - HHH000026: Second-level cache disabled
+2024-07-13 16:46:41 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 16:46:41 - HikariPool-1 - Starting...
+2024-07-13 16:46:41 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d825dbe
+2024-07-13 16:46:41 - HikariPool-1 - Start completed.
+2024-07-13 16:46:42 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 16:46:42 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:46:42 - 
+
+Using generated security password: 9c243ca0-1d2d-41ac-a5b9-386ef862ae14
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 16:46:42 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@43d2c8e3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8bb5c2a, org.springframework.security.web.context.SecurityContextHolderFilter@4a0fc665, org.springframework.security.web.header.HeaderWriterFilter@376bae20, org.springframework.web.filter.CorsFilter@6a9d572, org.springframework.security.web.authentication.logout.LogoutFilter@43778d6d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1067bc4c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@363d29dd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@a5df98c, org.springframework.security.web.access.ExceptionTranslationFilter@22e650e, org.springframework.security.web.access.intercept.AuthorizationFilter@7916568d]
+2024-07-13 16:46:43 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:46:43 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 16:46:43 - Started WifiApplication in 2.587 seconds (process running for 3.029)
+2024-07-13 16:46:43 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-13 16:46:43 - Initializing Servlet 'dispatcherServlet'
+2024-07-13 16:46:43 - Completed initialization in 0 ms
+2024-07-13 16:48:43 - Unexpected error occurred in scheduled task
+org.springframework.dao.InvalidDataAccessApiUsageException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:400)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:246)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy114.deleteAllByExpiryDateBefore(Unknown Source)
+	at com.wifi.utils.VerificationTokenCleanupTask.cleanupExpiredTokens(VerificationTokenCleanupTask.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: jakarta.persistence.TransactionRequiredException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:303)
+	at jdk.proxy2/jdk.proxy2.$Proxy107.remove(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$DeleteExecution.doExecute(JpaQueryExecution.java:298)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 23 common frames omitted
+2024-07-13 16:49:43 - Unexpected error occurred in scheduled task
+org.springframework.dao.InvalidDataAccessApiUsageException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:400)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:246)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy114.deleteAllByExpiryDateBefore(Unknown Source)
+	at com.wifi.utils.VerificationTokenCleanupTask.cleanupExpiredTokens(VerificationTokenCleanupTask.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: jakarta.persistence.TransactionRequiredException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:303)
+	at jdk.proxy2/jdk.proxy2.$Proxy107.remove(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$DeleteExecution.doExecute(JpaQueryExecution.java:298)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 23 common frames omitted
+2024-07-13 16:50:43 - Unexpected error occurred in scheduled task
+org.springframework.dao.InvalidDataAccessApiUsageException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:400)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:246)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy114.deleteAllByExpiryDateBefore(Unknown Source)
+	at com.wifi.utils.VerificationTokenCleanupTask.cleanupExpiredTokens(VerificationTokenCleanupTask.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: jakarta.persistence.TransactionRequiredException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:303)
+	at jdk.proxy2/jdk.proxy2.$Proxy107.remove(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$DeleteExecution.doExecute(JpaQueryExecution.java:298)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 23 common frames omitted
+2024-07-13 16:51:43 - Unexpected error occurred in scheduled task
+org.springframework.dao.InvalidDataAccessApiUsageException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:400)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:246)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy114.deleteAllByExpiryDateBefore(Unknown Source)
+	at com.wifi.utils.VerificationTokenCleanupTask.cleanupExpiredTokens(VerificationTokenCleanupTask.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: jakarta.persistence.TransactionRequiredException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:303)
+	at jdk.proxy2/jdk.proxy2.$Proxy107.remove(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$DeleteExecution.doExecute(JpaQueryExecution.java:298)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 23 common frames omitted
+2024-07-13 16:52:43 - Unexpected error occurred in scheduled task
+org.springframework.dao.InvalidDataAccessApiUsageException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:400)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:246)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy114.deleteAllByExpiryDateBefore(Unknown Source)
+	at com.wifi.utils.VerificationTokenCleanupTask.cleanupExpiredTokens(VerificationTokenCleanupTask.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: jakarta.persistence.TransactionRequiredException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:303)
+	at jdk.proxy2/jdk.proxy2.$Proxy107.remove(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$DeleteExecution.doExecute(JpaQueryExecution.java:298)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 23 common frames omitted
+2024-07-13 16:52:50 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:52:50 - HikariPool-1 - Shutdown initiated...
+2024-07-13 16:52:50 - HikariPool-1 - Shutdown completed.
+2024-07-13 16:52:53 - Starting WifiApplication using Java 17.0.11 with PID 17868 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 16:52:53 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 16:52:53 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 16:52:53 - Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
+2024-07-13 16:52:54 - Tomcat initialized with port 8080 (http)
+2024-07-13 16:52:54 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:52:54 - Starting service [Tomcat]
+2024-07-13 16:52:54 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 16:52:54 - Initializing Spring embedded WebApplicationContext
+2024-07-13 16:52:54 - Root WebApplicationContext: initialization completed in 765 ms
+2024-07-13 16:52:54 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 16:52:54 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 16:52:54 - HHH000026: Second-level cache disabled
+2024-07-13 16:52:54 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 16:52:54 - HikariPool-1 - Starting...
+2024-07-13 16:52:54 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77d0dbba
+2024-07-13 16:52:54 - HikariPool-1 - Start completed.
+2024-07-13 16:52:55 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 16:52:55 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:52:55 - 
+
+Using generated security password: b8a6d1c8-b48b-4746-bb0e-65b8801e004a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 16:52:55 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@12ebcdf6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30dd23e2, org.springframework.security.web.context.SecurityContextHolderFilter@59301546, org.springframework.security.web.header.HeaderWriterFilter@69f55ea, org.springframework.web.filter.CorsFilter@88fc9cb, org.springframework.security.web.authentication.logout.LogoutFilter@6df4d8f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@363d29dd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@25d87313, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75693526, org.springframework.security.web.access.ExceptionTranslationFilter@69ee0861, org.springframework.security.web.access.intercept.AuthorizationFilter@d15f031]
+2024-07-13 16:52:55 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:52:55 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 16:52:55 - Started WifiApplication in 2.652 seconds (process running for 3.109)
+2024-07-13 16:53:37 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:53:37 - HikariPool-1 - Shutdown initiated...
+2024-07-13 16:53:37 - HikariPool-1 - Shutdown completed.
+2024-07-13 16:57:00 - Starting WifiApplication using Java 17.0.11 with PID 12364 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 16:57:00 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 16:57:00 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 16:57:00 - Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2024-07-13 16:57:01 - Tomcat initialized with port 8080 (http)
+2024-07-13 16:57:01 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:57:01 - Starting service [Tomcat]
+2024-07-13 16:57:01 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 16:57:01 - Initializing Spring embedded WebApplicationContext
+2024-07-13 16:57:01 - Root WebApplicationContext: initialization completed in 705 ms
+2024-07-13 16:57:01 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 16:57:01 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 16:57:01 - HHH000026: Second-level cache disabled
+2024-07-13 16:57:01 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 16:57:01 - HikariPool-1 - Starting...
+2024-07-13 16:57:01 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c668c2a
+2024-07-13 16:57:01 - HikariPool-1 - Start completed.
+2024-07-13 16:57:02 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 16:57:02 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 16:57:02 - 
+
+Using generated security password: 30a96e84-41b8-49c3-abed-307193dac974
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 16:57:02 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6731b6bd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@768f2398, org.springframework.security.web.context.SecurityContextHolderFilter@5692863, org.springframework.security.web.header.HeaderWriterFilter@73502d5e, org.springframework.web.filter.CorsFilter@1f4fa465, org.springframework.security.web.authentication.logout.LogoutFilter@45dfb6a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bbb0a25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@237824b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e65c4d, org.springframework.security.web.access.ExceptionTranslationFilter@25d87313, org.springframework.security.web.access.intercept.AuthorizationFilter@55589ef5]
+2024-07-13 16:57:02 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 16:57:02 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 16:57:02 - Started WifiApplication in 2.5 seconds (process running for 2.938)
+2024-07-13 16:57:14 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-13 16:57:14 - Initializing Servlet 'dispatcherServlet'
+2024-07-13 16:57:14 - Completed initialization in 0 ms
+2024-07-13 17:00:31 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 17:00:31 - HikariPool-1 - Shutdown initiated...
+2024-07-13 17:00:31 - HikariPool-1 - Shutdown completed.
+2024-07-13 17:05:08 - Starting WifiApplication using Java 17.0.11 with PID 27176 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 17:05:08 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 17:05:08 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 17:05:08 - Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2024-07-13 17:05:08 - Tomcat initialized with port 8080 (http)
+2024-07-13 17:05:08 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 17:05:08 - Starting service [Tomcat]
+2024-07-13 17:05:08 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 17:05:08 - Initializing Spring embedded WebApplicationContext
+2024-07-13 17:05:08 - Root WebApplicationContext: initialization completed in 725 ms
+2024-07-13 17:05:09 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 17:05:09 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 17:05:09 - HHH000026: Second-level cache disabled
+2024-07-13 17:05:09 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 17:05:09 - HikariPool-1 - Starting...
+2024-07-13 17:05:09 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@333a44f2
+2024-07-13 17:05:09 - HikariPool-1 - Start completed.
+2024-07-13 17:05:09 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 17:05:10 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 17:05:10 - 
+
+Using generated security password: ac505937-a235-4fa5-821d-989f7297eca0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 17:05:10 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@793248d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6731b6bd, org.springframework.security.web.context.SecurityContextHolderFilter@213bd66a, org.springframework.security.web.header.HeaderWriterFilter@3c130cb2, org.springframework.web.filter.CorsFilter@768f2398, org.springframework.security.web.authentication.logout.LogoutFilter@d15f031, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77a1df4d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3857c5d5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f4fa465, org.springframework.security.web.access.ExceptionTranslationFilter@7866ffa, org.springframework.security.web.access.intercept.AuthorizationFilter@76c2d002]
+2024-07-13 17:05:10 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 17:05:10 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 17:05:10 - Started WifiApplication in 2.603 seconds (process running for 3.054)
+2024-07-13 17:05:10 - Deleted 0 expired tokens at 2024-07-13T17:05:10.551832
+2024-07-13 17:05:30 - Deleted 0 expired tokens at 2024-07-13T17:05:30.551281500
+2024-07-13 17:05:31 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-13 17:05:31 - Initializing Servlet 'dispatcherServlet'
+2024-07-13 17:05:31 - Completed initialization in 1 ms
+2024-07-13 17:05:50 - Deleted 0 expired tokens at 2024-07-13T17:05:50.550633400
+2024-07-13 17:06:10 - Deleted 0 expired tokens at 2024-07-13T17:06:10.549305900
+2024-07-13 17:06:30 - Deleted 0 expired tokens at 2024-07-13T17:06:30.560588700
+2024-07-13 17:06:44 - User registration failed: Invalid or expired verification token
+2024-07-13 17:06:50 - Deleted 1 expired tokens at 2024-07-13T17:06:50.560642300
+2024-07-13 17:07:10 - Deleted 0 expired tokens at 2024-07-13T17:07:10.560580900
+2024-07-13 17:07:30 - Deleted 0 expired tokens at 2024-07-13T17:07:30.550413900
+2024-07-13 17:07:34 - SQL Error: 1062, SQLState: 23000
+2024-07-13 17:07:34 - Duplicate entry '2757582052@qq.com' for key 'verification_token.email'
+2024-07-13 17:07:34 - Failed to send verification token: could not execute statement [Duplicate entry '2757582052@qq.com' for key 'verification_token.email'] [insert into verification_token (email,expiry_date,token) values (?,?,?)]; SQL [insert into verification_token (email,expiry_date,token) values (?,?,?)]; constraint [verification_token.email]
+2024-07-13 17:07:50 - Deleted 0 expired tokens at 2024-07-13T17:07:50.559868700
+2024-07-13 17:08:10 - Deleted 0 expired tokens at 2024-07-13T17:08:10.555618400
+2024-07-13 17:08:30 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 17:08:30 - HikariPool-1 - Shutdown initiated...
+2024-07-13 17:08:30 - HikariPool-1 - Shutdown completed.
+2024-07-13 17:09:03 - Starting WifiApplication using Java 17.0.11 with PID 11292 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 17:09:03 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 17:09:03 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 17:09:03 - Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2024-07-13 17:09:04 - Tomcat initialized with port 8080 (http)
+2024-07-13 17:09:04 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 17:09:04 - Starting service [Tomcat]
+2024-07-13 17:09:04 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-13 17:09:04 - Initializing Spring embedded WebApplicationContext
+2024-07-13 17:09:04 - Root WebApplicationContext: initialization completed in 759 ms
+2024-07-13 17:09:04 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 17:09:04 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 17:09:04 - HHH000026: Second-level cache disabled
+2024-07-13 17:09:04 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 17:09:04 - HikariPool-1 - Starting...
+2024-07-13 17:09:04 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@333a44f2
+2024-07-13 17:09:04 - HikariPool-1 - Start completed.
+2024-07-13 17:09:05 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 17:09:05 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 17:09:05 - 
+
+Using generated security password: 070c7635-812b-4e6c-88a4-a39e37216f7a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 17:09:05 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@793248d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6731b6bd, org.springframework.security.web.context.SecurityContextHolderFilter@213bd66a, org.springframework.security.web.header.HeaderWriterFilter@3c130cb2, org.springframework.web.filter.CorsFilter@768f2398, org.springframework.security.web.authentication.logout.LogoutFilter@d15f031, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77a1df4d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3857c5d5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f4fa465, org.springframework.security.web.access.ExceptionTranslationFilter@7866ffa, org.springframework.security.web.access.intercept.AuthorizationFilter@76c2d002]
+2024-07-13 17:09:05 - Starting ProtocolHandler ["http-nio-0.0.0.0-8080"]
+2024-07-13 17:09:05 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 17:09:05 - Started WifiApplication in 2.652 seconds (process running for 3.141)
+2024-07-13 17:09:05 - Deleted 1 expired tokens at 2024-07-13T17:09:05.764707700
+2024-07-13 17:09:22 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-13 17:09:22 - Initializing Servlet 'dispatcherServlet'
+2024-07-13 17:09:22 - Completed initialization in 1 ms
+2024-07-13 17:09:25 - Deleted 0 expired tokens at 2024-07-13T17:09:25.767782800
+2024-07-13 17:09:44 - User registration successful: com.wifi.entity.User@583dcdf
+2024-07-13 17:09:45 - Deleted 0 expired tokens at 2024-07-13T17:09:45.761478700
+2024-07-13 17:09:51 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 17:09:51 - HikariPool-1 - Shutdown initiated...
+2024-07-13 17:09:51 - HikariPool-1 - Shutdown completed.
+2024-07-13 17:19:08 - Could not detect default configuration classes for test class [com.wifi.WifiApplicationTests]: WifiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-13 17:19:09 - Found @SpringBootConfiguration com.wifi.WifiApplication for test class com.wifi.WifiApplicationTests
+2024-07-13 17:19:09 - Starting WifiApplicationTests using Java 17.0.11 with PID 9604 (started by WT in E:\IdeaProjects\wifi)
+2024-07-13 17:19:09 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 17:19:09 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 17:19:09 - Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+2024-07-13 17:19:10 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 17:19:10 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 17:19:10 - HHH000026: Second-level cache disabled
+2024-07-13 17:19:10 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 17:19:10 - HikariPool-1 - Starting...
+2024-07-13 17:19:11 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@213012a0
+2024-07-13 17:19:11 - HikariPool-1 - Start completed.
+2024-07-13 17:19:11 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 17:19:11 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 17:19:12 - 
+
+Using generated security password: e028927a-44d4-4e07-9db5-d821e1c3261d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 17:19:12 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4110ffe5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e405eaf, org.springframework.security.web.context.SecurityContextHolderFilter@50b78155, org.springframework.security.web.header.HeaderWriterFilter@33efa7d4, org.springframework.web.filter.CorsFilter@4981b83, org.springframework.security.web.authentication.logout.LogoutFilter@6a3c1b56, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61c11339, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d7d0946, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4446a191, org.springframework.security.web.access.ExceptionTranslationFilter@fc6cac6, org.springframework.security.web.access.intercept.AuthorizationFilter@63ff861e]
+2024-07-13 17:19:13 - Started WifiApplicationTests in 3.905 seconds (process running for 4.816)
+2024-07-13 17:19:13 - Deleted 0 expired tokens at 2024-07-13T17:19:13.096967500
+2024-07-13 17:19:13 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 17:19:13 - HikariPool-1 - Shutdown initiated...
+2024-07-13 17:19:13 - HikariPool-1 - Shutdown completed.
+2024-07-13 17:19:46 - Could not detect default configuration classes for test class [com.wifi.WifiApplicationTests]: WifiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-13 17:19:46 - Found @SpringBootConfiguration com.wifi.WifiApplication for test class com.wifi.WifiApplicationTests
+2024-07-13 17:19:46 - Starting WifiApplicationTests using Java 17.0.11 with PID 23544 (started by WT in E:\IdeaProjects\wifi)
+2024-07-13 17:19:46 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 17:19:47 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 17:19:47 - Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+2024-07-13 17:19:47 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 17:19:47 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 17:19:47 - HHH000026: Second-level cache disabled
+2024-07-13 17:19:48 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 17:19:48 - HikariPool-1 - Starting...
+2024-07-13 17:19:48 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f3fec43
+2024-07-13 17:19:48 - HikariPool-1 - Start completed.
+2024-07-13 17:19:49 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 17:19:49 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 17:19:49 - 
+
+Using generated security password: d09f5e09-644d-4e50-9ed9-dfaf3d434cd2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 17:19:50 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3a388769, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3054cdd3, org.springframework.security.web.context.SecurityContextHolderFilter@352d3749, org.springframework.security.web.header.HeaderWriterFilter@6b888692, org.springframework.web.filter.CorsFilter@755a4ef5, org.springframework.security.web.authentication.logout.LogoutFilter@19877453, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5935eb9c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45a40353, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6eff05e7, org.springframework.security.web.access.ExceptionTranslationFilter@76c2d002, org.springframework.security.web.access.intercept.AuthorizationFilter@6a3c1b56]
+2024-07-13 17:19:50 - Started WifiApplicationTests in 3.929 seconds (process running for 4.777)
+2024-07-13 17:19:50 - Deleted 0 expired tokens at 2024-07-13T17:19:50.562067900
+2024-07-13 17:19:51 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 17:19:51 - HikariPool-1 - Shutdown initiated...
+2024-07-13 17:19:51 - HikariPool-1 - Shutdown completed.
+2024-07-13 18:13:45 - Could not detect default configuration classes for test class [com.wifi.WifiApplicationTests]: WifiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-13 18:13:45 - Found @SpringBootConfiguration com.wifi.WifiApplication for test class com.wifi.WifiApplicationTests
+2024-07-13 18:13:46 - Starting WifiApplicationTests using Java 17.0.11 with PID 21000 (started by WT in E:\IdeaProjects\wifi)
+2024-07-13 18:13:46 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 18:13:46 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 18:13:46 - Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
+2024-07-13 18:13:47 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 18:13:47 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 18:13:47 - HHH000026: Second-level cache disabled
+2024-07-13 18:13:47 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 18:13:47 - HikariPool-1 - Starting...
+2024-07-13 18:13:47 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f6c8d45
+2024-07-13 18:13:47 - HikariPool-1 - Start completed.
+2024-07-13 18:13:48 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 18:13:48 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 18:13:49 - 
+
+Using generated security password: 55a91141-936a-48c9-94a6-b605f05a9f49
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 18:13:49 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@52737c1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@158cb50a, org.springframework.security.web.context.SecurityContextHolderFilter@55589ef5, org.springframework.security.web.header.HeaderWriterFilter@2c5b4b91, org.springframework.web.filter.CorsFilter@649a6d88, org.springframework.security.web.authentication.logout.LogoutFilter@43e9a8a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@793248d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@352d3749, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69e23e94, org.springframework.security.web.access.ExceptionTranslationFilter@30dd23e2, org.springframework.security.web.access.intercept.AuthorizationFilter@18711946]
+2024-07-13 18:13:49 - Started WifiApplicationTests in 3.967 seconds (process running for 4.804)
+2024-07-13 18:13:50 - Deleted 0 expired tokens at 2024-07-13T18:13:49.889213400
+2024-07-13 18:13:50 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 18:13:50 - HikariPool-1 - Shutdown initiated...
+2024-07-13 18:13:50 - HikariPool-1 - Shutdown completed.
+2024-07-13 18:54:23 - Could not detect default configuration classes for test class [com.wifi.WifiApplicationTests]: WifiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-13 18:54:23 - Found @SpringBootConfiguration com.wifi.WifiApplication for test class com.wifi.WifiApplicationTests
+2024-07-13 18:54:24 - Starting WifiApplicationTests using Java 17.0.11 with PID 28292 (started by WT in E:\IdeaProjects\wifi)
+2024-07-13 18:54:24 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 18:54:24 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 18:54:24 - Finished Spring Data repository scanning in 38 ms. Found 2 JPA repository interfaces.
+2024-07-13 18:54:25 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 18:54:25 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 18:54:25 - HHH000026: Second-level cache disabled
+2024-07-13 18:54:25 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 18:54:25 - HikariPool-1 - Starting...
+2024-07-13 18:54:26 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f6c8d45
+2024-07-13 18:54:26 - HikariPool-1 - Start completed.
+2024-07-13 18:54:26 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 18:54:26 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 18:54:27 - 
+
+Using generated security password: ae547fed-72de-4e0f-8791-5e22f72d9c9b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 18:54:27 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@52737c1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@158cb50a, org.springframework.security.web.context.SecurityContextHolderFilter@55589ef5, org.springframework.security.web.header.HeaderWriterFilter@2c5b4b91, org.springframework.web.filter.CorsFilter@649a6d88, org.springframework.security.web.authentication.logout.LogoutFilter@43e9a8a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@793248d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@352d3749, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69e23e94, org.springframework.security.web.access.ExceptionTranslationFilter@30dd23e2, org.springframework.security.web.access.intercept.AuthorizationFilter@18711946]
+2024-07-13 18:54:28 - Started WifiApplicationTests in 4.086 seconds (process running for 4.995)
+2024-07-13 18:54:28 - Deleted 0 expired tokens at 2024-07-13T18:54:28.174132200
+2024-07-13 18:54:28 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 18:54:28 - HikariPool-1 - Shutdown initiated...
+2024-07-13 18:54:28 - HikariPool-1 - Shutdown completed.
+2024-07-13 19:24:13 - Starting WifiApplication using Java 17.0.11 with PID 15256 (E:\IdeaProjects\wifi\target\classes started by WT in E:\IdeaProjects\wifi)
+2024-07-13 19:24:13 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 19:24:13 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 19:24:13 - Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+2024-07-13 19:24:14 - Tomcat initialized with port 8080 (http)
+2024-07-13 19:24:14 - Root WebApplicationContext: initialization completed in 781 ms
+2024-07-13 19:24:14 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 19:24:14 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 19:24:14 - HHH000026: Second-level cache disabled
+2024-07-13 19:24:14 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 19:24:14 - HikariPool-1 - Starting...
+2024-07-13 19:24:14 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77d0dbba
+2024-07-13 19:24:14 - HikariPool-1 - Start completed.
+2024-07-13 19:24:15 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 19:24:15 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 19:24:15 - 
+
+Using generated security password: ae855638-c453-47bd-a6c0-e4d073c7d4bc
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 19:24:15 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@202ba60a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12ebcdf6, org.springframework.security.web.context.SecurityContextHolderFilter@3203a4ae, org.springframework.security.web.header.HeaderWriterFilter@5de6c7d7, org.springframework.web.filter.CorsFilter@30dd23e2, org.springframework.security.web.authentication.logout.LogoutFilter@7daf167, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25fc2b8f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7866ffa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@88fc9cb, org.springframework.security.web.access.ExceptionTranslationFilter@1067bc4c, org.springframework.security.web.access.intercept.AuthorizationFilter@5f1dadf4]
+2024-07-13 19:24:15 - Tomcat started on port 8080 (http) with context path ''
+2024-07-13 19:24:15 - Started WifiApplication in 2.593 seconds (process running for 3.112)
+2024-07-13 19:24:15 - Deleted 0 expired tokens at 2024-07-13T19:24:15.885945600
+2024-07-13 19:24:16 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 19:24:16 - HikariPool-1 - Shutdown initiated...
+2024-07-13 19:24:16 - HikariPool-1 - Shutdown completed.
+2024-07-13 20:01:35 - Could not detect default configuration classes for test class [com.wifi.WifiApplicationTests]: WifiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-13 20:01:35 - Found @SpringBootConfiguration com.wifi.WifiApplication for test class com.wifi.WifiApplicationTests
+2024-07-13 20:01:35 - Starting WifiApplicationTests using Java 17.0.11 with PID 10004 (started by WT in E:\IdeaProjects\wifi)
+2024-07-13 20:01:35 - No active profile set, falling back to 1 default profile: "default"
+2024-07-13 20:01:36 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-13 20:01:36 - Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2024-07-13 20:01:37 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-13 20:01:37 - HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-07-13 20:01:37 - HHH000026: Second-level cache disabled
+2024-07-13 20:01:37 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-13 20:01:37 - HikariPool-1 - Starting...
+2024-07-13 20:01:37 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f6c8d45
+2024-07-13 20:01:37 - HikariPool-1 - Start completed.
+2024-07-13 20:01:38 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-13 20:01:38 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 20:01:39 - 
+
+Using generated security password: 1e1c137c-01aa-4a71-8003-cae441b744b5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-13 20:01:39 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@52737c1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@158cb50a, org.springframework.security.web.context.SecurityContextHolderFilter@55589ef5, org.springframework.security.web.header.HeaderWriterFilter@2c5b4b91, org.springframework.web.filter.CorsFilter@649a6d88, org.springframework.security.web.authentication.logout.LogoutFilter@43e9a8a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@793248d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@352d3749, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69e23e94, org.springframework.security.web.access.ExceptionTranslationFilter@30dd23e2, org.springframework.security.web.access.intercept.AuthorizationFilter@18711946]
+2024-07-13 20:01:39 - Started WifiApplicationTests in 3.959 seconds (process running for 4.976)
+2024-07-13 20:01:39 - Deleted 0 expired tokens at 2024-07-13T20:01:39.551568900
+2024-07-13 20:01:40 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13 20:01:40 - HikariPool-1 - Shutdown initiated...
+2024-07-13 20:01:40 - HikariPool-1 - Shutdown completed.

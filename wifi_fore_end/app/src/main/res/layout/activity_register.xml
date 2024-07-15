@@ -8,15 +8,63 @@
 
     <ImageView
         android:id="@+id/imageView_logo"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:scaleType="centerInside"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="0dp"
         android:src="@drawable/logo"
         android:layout_gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableStart="@drawable/baseline_email"
+            android:drawableLeft="@drawable/baseline_email"
+            android:drawablePadding="16dp"
+            android:hint="请输入邮箱"
+            android:inputType="textEmailAddress"
+            android:padding="16dp"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/captchaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/emailEditText"
+            android:layout_alignBottom="@id/emailEditText"
+            android:layout_toEndOf="@id/emailEditText"
+            android:layout_toRightOf="@id/emailEditText"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="获取验证码"
+            android:textSize="10sp"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/verificationCodeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edittext_bg"
+        android:drawableStart="@drawable/baseline_captcha"
+        android:drawableLeft="@drawable/baseline_captcha"
+        android:drawablePadding="16dp"
+        android:hint="请输入验证码"
+        android:inputType="textVisiblePassword"
+        android:padding="16dp"
+        android:textSize="14sp" />
 
     <EditText
         android:id="@+id/registerUsername"

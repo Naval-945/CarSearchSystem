@@ -54,6 +54,10 @@
             android:exported="true"
             android:foregroundServiceType="location"
             android:permission="TODO" />
+
+        <receiver android:name=".service.WifiScanReceiver"/>
+
+
     </application>
 
 </manifest>

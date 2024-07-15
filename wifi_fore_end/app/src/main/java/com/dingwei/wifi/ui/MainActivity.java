@@ -1,69 +1,92 @@
 package com.dingwei.wifi.ui;
 
+import android.graphics.PointF;
+import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
+import android.util.Log;
 
-import androidx.activity.EdgeToEdge;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import android.content.Intent;
-import com.dingwei.wifi.MySurfaceView;
+import com.dingwei.wifi.LocationMarkerView;
+import com.dingwei.wifi.NavigationView;
 import com.dingwei.wifi.R;
-import com.dingwei.wifi.service.WifiScanService;
+import com.dingwei.wifi.api.model.LocationViewModel;
+import androidx.lifecycle.ViewModelProvider;
+
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class MainActivity extends AppCompatActivity {
-    private static final int PERMISSIONS_REQUEST_CODE = 1;
-    private WifiScanService wifiScanService;
-    private MySurfaceView sv_map;
 
+    private static final String TAG = "MainActivity";
+
+    private LocationMarkerView locationMarkerView;
+    private LocationViewModel locationViewModel;
+    private NavigationView navigationView;
+
+    public String currentSpot;
+
+
+    @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-
         setContentView(R.layout.activity_main);
-        startWifiScanService();
-        requestPermissions();
 
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-//            return insets;
-//        });
+        locationMarkerView = findViewById(R.id.locationMarkerView);
+//        locationViewModel = new ViewModelProvider(this).get(LocationViewModel.class);
+        locationViewModel = LocationViewModel.getInstance();
+        navigationView = findViewById(R.id.navigationView);
+//        navigationView.initOrangePoints();
+
+        //直到这里都是LocationInfo（带有目前停车位信息）
+        locationViewModel.getLocationInfo().observe(this, locationInfo -> {
+            if (locationInfo != null) {
+                Log.i(TAG, "locationInfo changed!!");
+                //就修改定位标记位置
+                updateMarkerLocation(locationInfo.getX(), locationInfo.getY());
+                currentSpot = locationInfo.getParkingSpot();
+                Log.d(TAG, "currentSpot is " + currentSpot);
+            }
+        });
+
+        findViewById(R.id.button1).setOnClickListener(v -> navigateToSpot("A1"));
+        findViewById(R.id.button2).setOnClickListener(v -> navigateToSpot("A2"));
+        findViewById(R.id.button3).setOnClickListener(v -> navigateToSpot("A3"));
+        findViewById(R.id.button4).setOnClickListener(v -> navigateToSpot("A4"));
+        findViewById(R.id.buttonG).setOnClickListener(v -> navigateToSpot("GATE"));
+
+
     }
 
-    private void startWifiScanService() {
-        Intent serviceIntent = new Intent(this, WifiScanService.class);
-        startService(serviceIntent);
+    // 更新定位标记的位置
+    public void updateMarkerLocation(float x, float y) {
+        locationMarkerView.updateLocation(x, y);
     }
 
-    private void stopWifiScanService() {
-        Intent serviceIntent = new Intent(this, WifiScanService.class);
-        stopService(serviceIntent);
-    }
+    private void navigateToSpot(String spot) {
 
-    private void requestPermissions() {
-        String[] permissions = {
-                android.Manifest.permission.ACCESS_FINE_LOCATION,
-                android.Manifest.permission.ACCESS_COARSE_LOCATION,
-                android.Manifest.permission.ACCESS_WIFI_STATE,
-                android.Manifest.permission.CHANGE_WIFI_STATE,
-                android.Manifest.permission.FOREGROUND_SERVICE,
-                android.Manifest.permission.FOREGROUND_SERVICE_LOCATION
-        };
+        PointF currentLocation = locationMarkerView.getLocation();
 
-        ActivityCompat.requestPermissions(this, permissions, PERMISSIONS_REQUEST_CODE);
+        if(currentSpot.equals("R")){
+            PointF targetOrangePoint = navigationView.getNearestOrangePoint(spot);
+            Log.i(TAG, "Two points: " + currentLocation + " " + targetOrangePoint);
+            navigationView.clearRoutes();
+            navigationView.addRoute(currentLocation, targetOrangePoint);
+        }else{
+            PointF currentOrangePoint = navigationView.getNearestOrangePoint(currentSpot);
+            PointF targetOrangePoint = navigationView.getNearestOrangePoint(spot);
+            Log.i(TAG, "Three points: " + currentLocation + " " + currentOrangePoint + " " + targetOrangePoint);
+            navigationView.clearRoutes(); // 清除现有路线
+            navigationView.addRoute(currentLocation, currentOrangePoint, targetOrangePoint);
+        }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // 在活动销毁时停止 WifiScanService
-        stopWifiScanService();
+        Log.i(TAG, "onDestroy()");
     }
-
 }

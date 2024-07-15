@@ -2,6 +2,9 @@ package com.dingwei.wifi.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.util.Log;
+import android.view.View;
 import android.widget.*;
 
 import androidx.annotation.NonNull;
@@ -11,8 +14,11 @@ import com.dingwei.wifi.R;
 import com.dingwei.wifi.api.ApiService;
 import com.dingwei.wifi.api.RetrofitClient;
 import com.dingwei.wifi.api.model.ApiResponse;
+import com.dingwei.wifi.api.model.EmailRequest;
 import com.dingwei.wifi.api.model.RegisterRequest;
 import com.dingwei.wifi.api.model.User;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 
@@ -25,6 +31,9 @@ public class RegisterActivity extends AppCompatActivity {
 
     private EditText usernameEditText;
     private EditText passwordEditText;
+    private EditText emailEditText;
+    private EditText captchaEditText;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,49 +42,128 @@ public class RegisterActivity extends AppCompatActivity {
 
         usernameEditText = findViewById(R.id.registerUsername);
         passwordEditText = findViewById(R.id.registerPassword);
+        emailEditText = findViewById(R.id.emailEditText);
+        captchaEditText = findViewById(R.id.verificationCodeEditText);
         Button registerButton = findViewById(R.id.registerButton);
+        Button captchaButton = findViewById(R.id.captchaButton);
 
         registerButton.setOnClickListener(view -> {
             String username = usernameEditText.getText().toString();
             String password = passwordEditText.getText().toString();
-            registerUser(username, password);
+            String email = emailEditText.getText().toString();
+            String captcha = captchaEditText.getText().toString();
+            registerUser(username, password, email, captcha);
+
+            Log.i("registerActivity", " " + username + " " + password + " " + email + " " + captcha);
+        });
+
+
+        captchaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String email = emailEditText.getText().toString();
+                if(!"".equals(email)){
+                    sendCaptcha(email);
+                    // 禁用按钮
+                    captchaButton.setEnabled(false);
+
+                    new CountDownTimer(60000, 1000) {
+                        @Override
+                        public void onTick(long millisUntilFinished) {
+                            // 更新按钮文本，显示剩余时间
+                            captchaButton.setText("剩余时间：" + millisUntilFinished / 1000 + "秒");
+                        }
+
+                        @Override
+                        public void onFinish() {
+                            // 重新启用按钮，恢复原始文本
+                            captchaButton.setEnabled(true);
+                            captchaButton.setText("获取验证码");
+                        }
+                    }.start();
+                }
+                else{
+                    Toast.makeText(RegisterActivity.this, "验证码发送失败，请输入正确的邮箱！",Toast.LENGTH_LONG).show();
+
+                }
+            }
         });
     }
 
-    private void registerUser(String username, String password) {
+    private void registerUser(String username, String password, String email, String captcha) {
         Retrofit retrofit = RetrofitClient.getClient("http://123.249.15.162:8848/");
         ApiService apiService = retrofit.create(ApiService.class);
 
-        RegisterRequest registerRequest = new RegisterRequest(username, password);
+        RegisterRequest registerRequest = new RegisterRequest(username, password, email, captcha);
         Call<ApiResponse<User>> call = apiService.registerUser(registerRequest);
 
         call.enqueue(new Callback<ApiResponse<User>>() {
             @Override
             public void onResponse(@NonNull Call<ApiResponse<User>> call, @NonNull Response<ApiResponse<User>> response) {
+
+                Log.d("TAG", " "+response);
+
+                if(response.body() != null && response.isSuccessful()){
+                    ApiResponse<User> apiResponse = response.body();
+
+                    Toast.makeText(RegisterActivity.this, "注册成功, 欢迎您 ：" + apiResponse.getData().getUsername(),Toast.LENGTH_LONG).show();
+
+                    Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else{
+                    // Handle the error response
+                    if (response.errorBody() != null) {
+                        try {
+                            // Parse the error response body
+                            String errorBody = response.errorBody().string();
+                            ApiResponse<User> errorResponse = new Gson().fromJson(errorBody, new TypeToken<ApiResponse<User>>(){}.getType());
+                            String errorMessage = errorResponse.getMessage();
+                            // Display the error message
+                            Toast.makeText(RegisterActivity.this, "嘿嘿失败： "+errorMessage, Toast.LENGTH_LONG).show();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<ApiResponse<User>> call, @NonNull Throwable t) {
+                // 处理网络请求失败逻辑
+                Toast.makeText(RegisterActivity.this, "网络请求失败：" + t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    private void sendCaptcha(String email) {
+        Retrofit retrofit = RetrofitClient.getClient("http://123.249.15.162:8848/");
+        ApiService apiService = retrofit.create(ApiService.class);
+
+        EmailRequest emailRequest = new EmailRequest(email);
+        Call<ApiResponse<String>> call = apiService.sendCaptcha(emailRequest);
+
+        call.enqueue(new Callback<ApiResponse<String>>() {
+            @Override
+            public void onResponse(@NonNull Call<ApiResponse<String>> call, @NonNull Response<ApiResponse<String>> response) {
                 System.out.println("Response Code: " + response.code());
                 System.out.println("Response Message: " + response.message());
                 if (response.isSuccessful() && response.body() != null) {
-                    ApiResponse<User> apiResponse = response.body();
+                    ApiResponse<String> apiResponse = response.body();
                     if (apiResponse.getStatus() == 200) {
-                        User user = apiResponse.getData();
+                        String capcha = apiResponse.getData();
                         // 处理注册成功逻辑
-                        Toast.makeText(RegisterActivity.this, "注册成功！欢迎 " + user.getUsername(), Toast.LENGTH_LONG).show();
-
-                        // 启动主界面Activity
-                        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
-                        startActivity(intent);
-                        finish(); // 结束当前Activity,防止用户返回到登录页面
-
+                        Toast.makeText(RegisterActivity.this, "验证码已发送至 " + email, Toast.LENGTH_LONG).show();
                     } else {
                         // 处理注册失败逻辑
-                        Toast.makeText(RegisterActivity.this, "注册失败：" + apiResponse.getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(RegisterActivity.this, "验证码发送失败：" + apiResponse.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }
                 else {
                     try {
                         if (response.code() == 400) {
                             // 处理特定的错误代码
-                            Toast.makeText(RegisterActivity.this, "注册失败：已存在该用户", Toast.LENGTH_LONG).show();
+                            Toast.makeText(RegisterActivity.this, "注册失败: " + response.message(), Toast.LENGTH_LONG).show();
                         } else {
                             String errorBody = response.errorBody().string();
                             System.out.println("Error Body: " + errorBody);
@@ -89,7 +177,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(@NonNull Call<ApiResponse<User>> call, @NonNull Throwable t) {
+            public void onFailure(@NonNull Call<ApiResponse<String>> call, @NonNull Throwable t) {
                 // 处理网络请求失败逻辑
                 Toast.makeText(RegisterActivity.this, "网络请求失败：" + t.getMessage(), Toast.LENGTH_LONG).show();
             }
@@ -97,4 +185,5 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 }
+
 
