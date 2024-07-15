@@ -31,9 +31,13 @@ public class RegisterActivity extends AppCompatActivity {
 
     private EditText usernameEditText;
     private EditText passwordEditText;
+<<<<<<< HEAD
     private EditText emailEditText;
     private EditText captchaEditText;
 
+=======
+    private EditText confirm_pwdEditText;
+>>>>>>> 2d836c32e69b07e19f0c76ba882e267013101b35
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,14 +46,20 @@ public class RegisterActivity extends AppCompatActivity {
 
         usernameEditText = findViewById(R.id.registerUsername);
         passwordEditText = findViewById(R.id.registerPassword);
+<<<<<<< HEAD
         emailEditText = findViewById(R.id.emailEditText);
         captchaEditText = findViewById(R.id.verificationCodeEditText);
+=======
+        confirm_pwdEditText=findViewById(R.id.password_ck);
+
+>>>>>>> 2d836c32e69b07e19f0c76ba882e267013101b35
         Button registerButton = findViewById(R.id.registerButton);
         Button captchaButton = findViewById(R.id.captchaButton);
 
         registerButton.setOnClickListener(view -> {
             String username = usernameEditText.getText().toString();
             String password = passwordEditText.getText().toString();
+<<<<<<< HEAD
             String email = emailEditText.getText().toString();
             String captcha = captchaEditText.getText().toString();
             registerUser(username, password, email, captcha);
@@ -88,6 +98,17 @@ public class RegisterActivity extends AppCompatActivity {
 
                 }
             }
+=======
+            String confirm_pwd=confirm_pwdEditText.getText().toString();
+
+            if(password.equals(confirm_pwd)){
+                registerUser(username, password);
+            }else{
+                Toast.makeText(this,"两次输入的密码不一致",Toast.LENGTH_SHORT).show();
+            }
+
+
+>>>>>>> 2d836c32e69b07e19f0c76ba882e267013101b35
         });
     }
 
